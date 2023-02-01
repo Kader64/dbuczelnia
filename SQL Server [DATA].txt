@@ -1,0 +1,1763 @@
+INSERT INTO President (firstname, lastname)
+VALUES
+('John', 'Smith');
+
+INSERT INTO Academy (name, address, phone_number, email)
+VALUES
+('University of XYZ', '123 Main St', '5551234567', 'universityxyz@email.com');
+
+INSERT INTO department (name, id_Academy)
+VALUES
+('Department of Science', 1),
+('Medicine Science Department', 1),
+('Department of Geographical Sciences', 1),
+('Department of History Sciences', 1),
+('Department of Business Sciences', 1),
+('Department of Law Sciences', 1),
+('Department of Communication', 1),
+('Department of Stylistic Sciences', 1),
+('Department of Astronomical Sciences', 1),
+('Department of Agricultural Sciences', 1);
+
+INSERT INTO Deanery (phone_number, email) VALUES 
+('555555555', 'deanery1@example.com'),
+('555556555', 'deanery2@example.com'),
+('555557555', 'deanery3@example.com'),
+('555558555', 'deanery4@example.com'),
+('555559555', 'deanery5@example.com'),
+('555560555', 'deanery6@example.com'),
+('555561555', 'deanery7@example.com'),
+('555562555', 'deanery8@example.com'),
+('555563555', 'deanery9@example.com');
+
+INSERT INTO Rooms (numberOfRoom) VALUES
+(191),
+(224),
+(255),
+(231),
+(128),
+(214),
+(51),
+(153),
+(269),
+(186),
+(79),
+(55),
+(128),
+(209),
+(249),
+(80),
+(139),
+(89),
+(86),
+(163),
+(254),
+(62),
+(219),
+(19),
+(191),
+(70),
+(142),
+(92),
+(161),
+(103),
+(99),
+(239),
+(199),
+(192),
+(253),
+(246),
+(115),
+(95),
+(204),
+(26),
+(30),
+(238),
+(62),
+(190),
+(149),
+(24),
+(204),
+(183),
+(133),
+(186),
+(280),
+(299),
+(286),
+(224),
+(131),
+(217),
+(243),
+(37),
+(162);
+
+INSERT INTO FieldsOfStudy (name, id_Department)
+VALUES
+('Computer Science', 1),
+('Mathematics', 1),
+('Engineering', 1),
+('Physics', 1),
+('Chemistry', 2),
+('Biology', 2),
+('Medicine', 2),
+('Psychology', 2),
+('Sociology', 2),
+('Anthropology', 3),
+('Geography', 3),
+('History', 4),
+('Linguistics', 4),
+('Philosophy', 4),
+('Political Science', 4),
+('Economics', 4),
+('Business', 5),
+('Finance', 5),
+('Accounting', 5),
+('Management', 5),
+('Human Resources', 6),
+('Law', 6),
+('Criminal Justice', 6),
+('Education', 5),
+('Nursing', 2),
+('Social Work', 6),
+('Public Health', 6),
+('Communications', 7),
+('Journalism', 7),
+('Photography', 8),
+('Fashion', 8),
+('Design', 8),
+('Archeology', 3),
+('Environmental Science', 3),
+('Astronomy', 9),
+('Mining', 10),
+('Oceanography', 9),
+('Meteorology', 9),
+('Earth Science', 9),
+('Environmental Studies', 9),
+('Forestry', 9),
+('Agriculture', 10);
+
+
+INSERT INTO StudentsGroups (groupName) VALUES
+('Class A'),
+('Class B'),
+('Class C'),
+('Class D'),
+('Class E'),
+('Class F'),
+('Class G'),
+('Class H');
+
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title)
+VALUES
+('John', 'Smith', 'Male', '1234567890', 'johnsmith@email.com', '123 Main St', 'Professor of Biology'),
+('Walter', 'White', 'Male', '0987654321', 'heisenberg@email.com', '3828 Piermont Dr', 'Professor of Chemistry'),
+('Michael', 'Johnson', 'Male', '5554443333', 'michaelj@email.com', '789 Elm St', 'Professor of Philosophy'),
+('Samantha', 'Williams', 'Female', '1112223333', 'samanthaw@email.com', '321 Oak St', 'Professor of Mathematics'),
+('Ashley', 'Brown', 'Female', '4445556666', 'ashleyb@email.com', '246 Pine St', 'Professor of Computer Science'),
+('David', 'Jones', 'Male', '7778889999', 'davidj@email.com', '135 Cedar St', 'Professor of Geography'),
+('Jessica', 'Miller', 'Female', '1111234567', 'jessicam@email.com', '678 Birch St', 'Professor of History'),
+('Richard', 'Moore', 'Male', '2223334444', 'richardm@email.com', '987 Maple St', 'Professor of Political Science'),
+('Mark', 'Taylor', 'Male', '3334445555', 'markt@email.com', '654 Willow St', 'Professor of Economics'),
+('Mary', 'Anderson', 'Female', '4445556666', 'marya@email.com', '789 Pine St', 'Professor of Psychology'),
+('Brian', 'Thomas', 'Male', '5556667777', 'briant@email.com', '135 Oak St', 'Professor of Sociology'),
+('Kevin', 'Moore', 'Male', '6667778888', 'kevinm@email.com', '246 Cedar St', 'Professor of Journalism'),
+('Matthew', 'Thompson', 'Male', '1112223333', 'matthewt@email.com', '789 Pine St', 'Professor'),
+('Elizabeth', 'Garcia', 'Female', '2223334444', 'elizabethg@email.com', '135 Oak St', 'Professor of Business'),
+('Andrew', 'Martinez', 'Male', '3334445555', 'andrewm@email.com', '246 Cedar St', 'Professor of Law'),
+('Stephanie', 'Robinson', 'Female', '4445556666', 'stephanier@email.com', '321 Elm St', 'Professor of Physiology'),
+('Mark', 'Clark', 'Male', '5556667777', 'markc@email.com', '621 Cedar St', 'Professor of Marketing');
+
+INSERT INTO professors_fieldsofstudy (id_Professors, id_FieldsOfStudy) VALUES 
+	(1,6),
+	(2,5),
+	(3,14),
+	(4,2),
+	(5,1),
+	(6, 11),
+	(7, 12),
+	(8, 15),
+	(9, 16),
+	(10, 8),
+	(11, 9),
+	(12, 29),
+	(13, 30),
+	(13, 37),
+	(13, 35),
+	(14, 17),
+	(15, 22),
+	(16, 14),
+	(17, 19),
+	(17, 20);
+
+
+INSERT INTO Lecture (topic, numberOfLecture, startTime, endTime, id_group, id_Professors, id_Rooms)
+VALUES
+('Introduction to Artificial Intelligence', 1, '2022-01-01 10:00:00', '2022-01-01 12:00:00', 1, 5, 2),
+('Machine Learning', 2, '2022-01-02 09:00:00', '2022-01-02 11:00:00', 1, 5, 54),
+('Deep Learning', 3, '2022-01-03 08:00:00', '2022-01-03 10:00:00', 1, 5, 4),
+('Natural Language Processing', 4, '2022-01-04 14:00:00', '2022-01-04 16:00:00', 1, 5, 21),
+('Computer Vision', 5, '2022-01-05 13:00:00', '2022-01-05 15:00:00', 1, 5, 2),
+('Data Structures and Algorithms', 6, '2022-01-06 12:00:00', '2022-01-06 14:00:00', 1, 5, 45),
+('Operating Systems', 7, '2022-01-07 15:00:00', '2022-01-07 17:00:00', 1, 5, 46),
+('Computer Networks', 8, '2022-01-08 14:00:00', '2022-01-08 16:00:00', 1, 5, 47),
+('Database Systems', 9, '2022-01-09 10:00:00', '2022-01-09 12:00:00', 1, 5, 8),
+('Web Development', 10, '2022-01-10 09:00:00', '2022-01-10 11:00:00', 1, 5, 9),
+('Data Science', 11, '2022-01-11 08:00:00', '2022-01-11 10:00:00', 1, 5, 10),
+('Big Data', 12, '2022-01-12 14:00:00', '2022-01-12 16:00:00', 1, 5, 11),
+('Cloud Computing', 13, '2022-01-13 13:00:00', '2022-01-13 15:00:00', 1, 5, 12),
+('DevOps', 14, '2022-01-14 12:00:00', '2022-01-14 14:00:00', 1, 5, 4),
+('Internet of Things', 15, '2022-01-15 15:00:00', '2022-01-15 17:00:00', 1, 5, 12),
+('Blockchain', 16, '2022-01-16 14:00:00', '2022-01-16 16:00:00', 1, 5, 13),
+('Security', 17, '2022-01-17 10:00:00', '2022-01-17 12:00:00', 1, 5, 15),
+('Cryptography', 18, '2022-01-18 09:00:00', '2022-01-18 11:00:00', 1, 5, 24),
+('Introduction to Python', 19, '2022-01-19 08:00:00', '2022-01-19 10:00:00', 1, 5, 37),
+('Advanced Python', 20, '2022-01-20 14:00:00', '2022-01-20 16:00:00', 1, 5, 35),
+('Introduction to JavaScript', 21, '2022-01-21 13:00:00', '2022-01-21 15:00:00', 1, 5, 34),	
+('Calculus', 1, '2022-09-01 09:00:00', '2022-09-01 10:30:00', 2, 4, 24),
+('Linear Algebra', 2, '2022-09-02 14:00:00', '2022-09-02 15:30:00', 2, 4, 14),
+('Probability Theory', 3, '2022-09-03 10:00:00', '2022-09-03 11:30:00', 2, 4, 44),
+('Number Theory', 4, '2022-09-07 16:00:00', '2022-09-07 17:30:00', 2, 4, 23),
+('Differential Equations', 5, '2022-09-08 09:00:00', '2022-09-08 10:30:00', 2, 4, 17),
+('Classical Mechanics', 1, '2022-09-01 09:00:00', '2022-09-01 10:30:00', 2, 4, 18),
+('Quantum Mechanics', 2, '2022-09-02 14:00:00', '2022-09-02 15:30:00', 2, 4, 19),
+('Thermodynamics', 3, '2022-09-03 10:00:00', '2022-09-03 11:30:00', 2, 4, 21),
+('Electromagnetism', 4, '2022-09-07 16:00:00', '2022-09-07 17:30:00', 2, 4, 42),
+('Optics', 5, '2022-09-08 09:00:00', '2022-09-08 10:30:00', 2, 4, 15),
+('Organic Chemistry', 1, '2022-09-11 09:00:00', '2022-09-11 10:30:00', 3, 2, 24),
+('Inorganic Chemistry', 2, '2022-09-12 14:00:00', '2022-09-12 15:30:00', 3, 2, 52),
+('Physical Chemistry', 3, '2022-09-15 10:00:00', '2022-09-15 11:30:00', 3, 2, 52),
+('Analytical Chemistry', 4, '2022-09-17 16:00:00', '2022-09-17 17:30:00', 3, 2, 53),
+('Biochemistry', 5, '2022-09-19 09:00:00', '2022-09-19 10:30:00', 3, 1, 13),
+('Cell Biology', 1, '2022-09-21 09:00:00', '2022-09-21 10:30:00', 3, 1, 17),
+('Genetics', 2, '2022-09-22 14:00:00', '2022-09-22 15:30:00', 3, 1, 18),
+('Ecology', 3, '2022-09-25 10:00:00', '2022-09-25 11:30:00', 3, 1, 29),
+('Microbiology', 4, '2022-09-26 16:00:00', '2022-09-26 17:30:00', 1, 1, 28),
+('Evolutionary Biology', 5, '2022-09-28 09:00:00', '2022-09-28 10:30:00', 3, 2, 39),
+('Anatomy', 1, '2022-09-30 09:00:00', '2022-09-30 10:30:00', 4, 10, 40),
+('Physiology', 2, '2022-10-01 14:00:00', '2022-10-01 15:30:00', 4, 16, 10),
+('Pathology', 3, '2022-10-03 10:00:00', '2022-10-03 11:30:00', 4, 16, 20),
+('Microbiology and Infectious Diseases', 4, '2022-10-04 16:00:00', '2022-10-04 17:30:00', 4, 16, 14),
+('Pharmacology', 5, '2022-10-06 09:00:00', '2022-10-06 10:30:00', 4, 16, 53),
+('Cognitive Psychology', 1, '2022-10-07 09:00:00', '2022-10-07 10:30:00', 4, 10, 21),
+('Social Psychology', 2, '2022-10-08 14:00:00', '2022-10-08 15:30:00', 4, 10, 36),
+('Developmental Psychology', 3, '2022-10-10 10:00:00', '2022-10-10 11:30:00', 4, 10, 35),
+('Clinical Psychology', 4, '2022-10-11 16:00:00', '2022-10-11 17:30:00', 4, 10, 32),
+('Neuropsychology', 5, '2022-10-13 09:00:00', '2022-10-13 10:30:00', 2, 10, 21),
+('Social Structures', 1, '2022-10-14 09:00:00', '2022-10-14 10:30:00', 2, 11, 47),
+('Social Inequality', 2, '2022-10-15 14:00:00', '2022-10-15 15:30:00', 2, 11, 38),
+('Culture and Society', 3, '2022-10-17 10:00:00', '2022-10-17 11:30:00', 2, 11, 39),
+('Sociological Research Methods', 4, '2022-10-18 16:00:00', '2022-10-18 17:30:00', 2, 11, 41),
+('Social Change', 5, '2022-10-20 09:00:00', '2022-10-20 10:30:00', 2, 11, 43),
+('Cultural Anthropology', 1, '2022-10-24 09:00:00', '2022-10-24 10:30:00', 5, 12, 42),
+('Physical Anthropology', 2, '2022-10-25 14:00:00', '2022-10-25 15:30:00', 5, 12, 45),
+('Archaeology', 3, '2022-10-27 10:00:00', '2022-10-27 11:30:00', 5, 12, 46),
+('Linguistic Anthropology', 4, '2022-10-28 16:00:00', '2022-10-28 17:30:00', 5, 12, 47),
+('Economic Anthropology', 5, '2022-10-30 09:00:00', '2022-10-30 10:30:00', 5, 12, 48),
+('Physical Geography', 1, '2022-11-01 09:00:00', '2022-11-01 10:30:00', 5, 6, 49),
+('Human Geography', 2, '2022-11-02 14:00:00', '2022-11-02 15:30:00', 5, 6, 50),
+('Geographic Information Science', 3, '2022-11-03 10:00:00', '2022-11-03 11:30:00', 5, 6, 59),
+('Climatology', 4, '2022-11-07 16:00:00', '2022-11-07 17:30:00', 5, 6, 43),
+('Geomorphology', 5, '2022-11-08 09:00:00', '2022-11-08 10:30:00', 5, 6, 51),
+('Ancient History', 1, '2022-11-09 09:00:00', '2022-11-09 10:30:00', 5, 7, 42),
+('Medieval History', 2, '2022-11-10 14:00:00', '2022-11-10 15:30:00', 5, 7, 37),
+('Modern History', 3, '2022-11-11 10:00:00', '2022-11-11 11:30:00', 5, 7, 27),
+('World History', 4, '2022-11-14 16:00:00', '2022-11-14 17:30:00', 5, 7, 26),
+('Historiography', 5, '2022-11-15 09:00:00', '2022-11-15 10:30:00', 5, 7, 25),
+('Phonetics and Phonology', 1, '2022-11-16 09:00:00', '2022-11-16 10:30:00', 3, 11, 24),
+('Morphology and Syntax', 2, '2022-11-17 14:00:00', '2022-11-17 15:30:00', 3, 11, 19),
+('Semantics and Pragmatics', 3, '2022-11-18 10:00:00', '2022-11-18 11:30:00', 3, 11, 36),
+('Historical Linguistics', 4, '2022-11-21 16:00:00', '2022-11-21 17:30:00', 3, 11, 47),
+('Computational Linguistics', 5, '2022-11-22 09:00:00', '2022-11-22 10:30:00', 3, 11, 37),
+('Ancient Philosophy', 1, '2022-11-23 09:00:00', '2022-11-23 10:30:00', 4, 3, 38),
+('Medieval Philosophy', 2, '2022-11-24 14:00:00', '2022-11-24 15:30:00', 4, 3, 28),
+('Modern Philosophy', 3, '2022-11-25 10:00:00', '2022-11-25 11:30:00', 4, 3, 29),
+('Ethics', 4, '2022-11-28 16:00:00', '2022-11-28 17:30:00', 4, 3, 1),
+('Epistemology', 5, '2022-11-29 09:00:00', '2022-11-29 10:30:00', 4, 3, 2),
+('Comparative Politics', 1, '2022-11-30 09:00:00', '2022-11-30 10:30:00', 1, 8, 3),
+('International Relations', 2, '2022-12-01 14:00:00', '2022-12-01 15:30:00', 1, 8, 4),
+('Political Theory', 3, '2022-12-02 10:00:00', '2022-12-02 11:30:00', 1, 8, 5),
+('Public Policy', 4, '2022-12-05 16:00:00', '2022-12-05 17:30:00', 1, 8, 6),
+('Political Methodology', 5, '2022-12-06 09:00:00', '2022-12-06 10:30:00', 1, 8, 7),
+('Microeconomics', 1, '2022-12-07 09:00:00', '2022-12-07 10:30:00', 6, 8, 8),
+('Macroeconomics', 2, '2022-12-08 14:00:00', '2022-12-08 15:30:00', 6, 8, 9),
+('Econometrics', 3, '2022-12-09 10:00:00', '2022-12-09 11:30:00', 6, 8, 10),
+('International Economics', 4, '2022-12-12 16:00:00', '2022-12-12 17:30:00', 6, 8, 11),
+('Behavioral Economics', 5, '2022-12-13 09:00:00', '2022-12-13 10:30:00', 6, 8, 12),
+('Marketing', 1, '2022-12-14 09:00:00', '2022-12-14 10:30:00', 6, 9, 13),
+('Finance', 2, '2022-12-15 14:00:00', '2022-12-15 15:30:00', 6, 9, 44),
+('Accounting', 3, '2022-12-16 10:00:00', '2022-12-16 11:30:00', 6, 9, 4),
+('Operations Management', 4, '2022-12-19 16:00:00', '2022-12-19 17:30:00', 6, 9, 4),
+('Strategic Management', 5, '2022-12-20 09:00:00', '2022-12-20 10:30:00', 6, 9, 4),
+('Investment Analysis', 1, '2022-12-21 09:00:00', '2022-12-21 10:30:00', 7, 9, 4),
+('Portfolio Management', 2, '2022-12-22 14:00:00', '2022-12-22 15:30:00', 7, 9, 4),
+('Corporate Finance', 3, '2022-12-23 10:00:00', '2022-12-23 11:30:00', 7, 9, 4),
+('Derivative Securities', 4, '2022-12-26 16:00:00', '2022-12-26 17:30:00', 7, 9, 4),
+('Behavioral Finance', 5, '2022-12-27 09:00:00', '2022-12-27 10:30:00', 7, 9, 24),
+('Financial Accounting', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 7, 17, 42),
+('Cost Accounting', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 7, 17, 24),
+('Managerial Accounting', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 7, 17, 43),
+('Taxation', 4, '2023-01-02 16:00:00', '2023-01-02 17:30:00', 7, 17, 34),
+('Auditing', 5, '2023-01-03 09:00:00', '2023-01-03 10:30:00', 7, 17, 34),
+('Introduction to Management', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 7, 17, 34),
+('Strategic Planning', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 7, 17, 35),
+('Leadership Skills', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 7, 17, 45),
+('Change Management', 4, '2023-01-02 16:00:00', '2023-01-02 17:30:00', 7, 17, 45),
+('Performance Management', 5, '2023-01-03 09:00:00', '2023-01-03 10:30:00', 7, 17, 4),
+('Employment Law', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 2, 15, 4),
+('Compensation and Benefits', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 2, 15, 4),
+('Talent Management', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 2, 15, 4),
+('Employee Relations', 4, '2023-01-02 16:00:00', '2023-01-02 17:30:00', 2, 15, 45),
+('Workplace Diversity', 5, '2023-01-03 09:00:00', '2023-01-03 11:00:00', 2, 15, 45),
+('Constitutional Law', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 2, 15, 54),
+('Contract Law', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 2, 15, 54),
+('Property Law', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 2, 15, 45),
+('Criminal Investigation', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 3, 15, 32),
+('Criminal Procedure', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 3, 15, 34),
+('Forensic Science', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 3, 15, 43),
+('Educational Psychology', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 3, 15, 32),
+('Curriculum Development', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 3, 15, 4),
+('Education Policy', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 3, 15, 4),
+('Nursing Fundamentals', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 2, 14, 4),
+('Medical-Surgical Nursing', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 2, 14, 4),
+('Pediatric Nursing', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 2, 14, 4),
+('Social Work Practice', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 2, 14, 32),
+('Human Behavior and Social Environment', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 2, 14, 4),
+('Social Policy and Advocacy', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 2, 14, 55),
+('Epidemiology and Biostatistics', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 2, 14, 55),
+('Health Promotion and Disease Prevention', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 6, 14, 55),
+('Environmental Health', 3, '2022-12-30 10:00:00', '2022-12-30 12:00:00', 6, 3, 4),
+('Introduction to Communications', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 6, 3, 4),
+('Interpersonal Communications', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 6, 3, 4),
+('Public Speaking and Presentation Skills', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 6, 3, 4),
+('Introduction to Journalism', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 6, 12, 24),
+('News Writing and Reporting', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 6, 12,24),
+('Multimedia Storytelling', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 6, 12, 4),	
+('Introduction to Photography', 1, '2022-12-28 09:00:00', '2022-12-28 10:30:00', 3, 12, 54),
+('Composition and Lighting', 2, '2022-12-29 14:00:00', '2022-12-29 15:30:00', 3, 12, 4),
+('Studio and Location Photography', 3, '2022-12-30 10:00:00', '2022-12-30 11:30:00', 3, 13, 4),
+('Introduction to Photography', 1, '2022-09-30 09:00:00', '2022-09-30 10:30:00', 3, 13, 14),
+('Introduction to Fashion', 1, '2022-10-01 14:00:00', '2022-10-01 15:30:00', 3, 13, 44),
+('Introduction to Pathology', 1, '2022-10-03 10:00:00', '2022-10-03 11:30:00', 1, 13, 14),
+('Introduction to Design', 1, '2022-10-04 16:00:00', '2022-10-04 17:30:00', 2, 13, 24),
+('Introduction to Archeology', 1, '2022-10-06 09:00:00', '2022-10-06 10:30:00', 6, 13, 4),
+('Introduction to Environmental Science', 1, '2022-10-06 09:00:00', '2022-10-06 10:30:00', 7, 13, 4),
+('Introduction to Astronomy', 1, '2022-10-06 09:00:00', '2022-10-06 10:30:00', 8, 13, 4),
+('Introduction to Geology', 1, '2022-10-06 09:00:00', '2022-10-06 10:30:00', 7, 13, 4),
+('Introduction to Oceanography', 1, '2022-09-11 09:00:00', '2022-09-11 10:30:00', 5, 13, 24),
+('Introduction to Meteorology', 1, '2022-09-12 14:00:00', '2022-09-12 15:30:00', 3, 13, 41),
+('Introduction to Earth Science', 1, '2022-09-15 10:00:00', '2022-09-15 11:30:00', 1, 13, 51),
+('Introduction to Environmental Studies', 1, '2022-09-17 16:00:00', '2022-09-17 17:30:00', 4, 13, 14),
+('Introduction to Forestry', 1, '2022-09-19 09:00:00', '2022-09-19 10:30:00', 2, 13, 16),
+('Introduction to Agriculture', 1, '2022-09-21 09:00:00', '2022-09-21 10:30:00', 1, 13, 17);
+
+
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES
+(7146457, 'John', 'Doe', 'male', '1234567890', 'johndoe@email.com', '123 Main St', '1990-01-01', '1', 1),
+(6293069, 'Jane', 'Smith', 'female', '0987654321', 'janesmith@email.com', '456 Park Ave', '1992-02-14', '2', 2),
+(4744826, 'Bob', 'Johnson', 'male', '5555555555', 'bobjohnson@email.com', '789 Elm St', '1994-03-21', '3', 4),
+(4632322, 'Emily', 'Williams', 'female', '4444444444', 'emilywilliams@email.com', '321 Oak St', '1996-04-28', '1', 1),
+(7739696, 'Michael', 'Brown', 'male', '2222222222', 'michaelbrown@email.com', '654 Pine St', '1998-05-15', '2', 2),
+(1760789, 'Sarah', 'Jones', 'female', '1111111111', 'sarahjones@email.com', '987 Cedar St', '2000-06-22', '3', 3),
+(7128809, 'David', 'Garcia', 'male', '3333333333', 'davidgarcia@email.com', '246 Maple St', '2002-07-29', '1', 1),
+(4167163, 'Jessica', 'Martinez', 'female', '6666666666', 'jessicamartinez@email.com', '369 Birch St', '2004-08-16', '2', 2),
+(2701180, 'James', 'Rodriguez', 'male', '7777777777', 'jamesrodriguez@email.com', '159 Willow St', '2006-09-23', '3', 4),
+(6023979, 'Emily', 'Allen', 'female', '8888888888', 'emilyallen@email.com', '753 Dogwood St', '2008-10-30', '1', 5),
+(8838726, 'Jacob', 'King', 'male', '9999999999', 'jacobking@email.com', '951 Cherry St', '2010-11-17', '2', 2),
+(9136976, 'Isabella', 'Wright', 'female', '0000000000', 'isabellawright@email.com', '753 Oak St', '2012-12-24', '3', 3),
+(4779606, 'Andrew', 'Dyudaz', 'male', '1010101010', 'andrewdyudaz@email.com', '951 Pine St', '2014-01-31', '1', 1),
+(6709394, 'Sofia', 'Hill', 'female', '1212121212', 'sofiahill@email.com', '753 Cedar St', '2016-02-14', '2', 2),
+(2026214, 'Mason', 'Scott', 'male', '1313131313', 'masonscott@email.com', '951 Birch St', '1992-03-21', '3', 4),
+(4604675, 'Avery', 'Green', 'female', '1414141414', 'averygreen@email.com', '753 Maple St', '1999-04-28', '1', 5),
+(2180180, 'Evelyn', 'Baker', 'female', '1515151515', 'evelynbaker@email.com', '951 Willow St', '1994-05-15', '2', 2),
+(6444063, 'Abigail', 'Adams', 'female', '1616161616', 'abigailadams@email.com', '753 Dogwood St', '1995-06-22', '3', 3),
+(3551034, 'Jackson', 'Nelson', 'male', '1717171717', 'jacksonnelson@email.com', '951 Cherry St', '1992-07-29', '1', 4),
+(9124252, 'Ella', 'Carter', 'female', '1818181818', 'ellacarter@email.com', '753 Oak St', '1992-08-16', '2', 2),
+(2198823, 'Landon', 'Mitchell', 'male', '1919191919', 'landonmitchell@email.com', '951 Pine St', '1988-09-23', '3', 3),
+(9965608, 'Natalie', 'Perez', 'female', '2020202020', 'natalyperez@email.com', '753 Cedar St', '1993-10-30', '1', 1),
+(6570096, 'Cameron', 'Roberts', 'male', '2121212121', 'cameronroberts@email.com', '951 Birch St', '1992-11-17', '2', 5),
+(1439916, 'Lila', 'Turner', 'female', '2222222222', 'lilaturner@email.com', '753 Maple St', '1992-11-17', '3', 3),
+(7157456, 'Aiden', 'Phillips', 'male', '2323232323', 'aidenphillips@email.com', '951 Willow St', '1992-01-31', '1', 4),
+(3429178, 'Brooklyn', 'Campbell', 'female', '2424242424', 'brooklyncampbell@email.com', '753 Dogwood St', '1996-02-14', '2', 2),
+(8085509, 'Makayla', 'Parker', 'female', '2525252525', 'makaylaparker@email.com', '951 Cherry St', '1992-03-21', '3', 3),
+(1674416, 'Jason', 'Evans', 'male', '2626262626', 'jasonevans@email.com', '753 Oak St', '1982-04-28', '1', 1),
+(6562026, 'Alyssa', 'Edwards', 'female', '2727272727', 'alyssaedwards@email.com', '951 Pine St', '1992-05-15', '2', 4),
+(7295869, 'Luke', 'Stewart', 'male', '2828282828', 'lukestewart@email.com', '753 Cedar St', '1972-06-22', '3', 3),
+(1555360, 'Madison', 'Flores', 'female', '2929292929', 'madisonflores@email.com', '951 Birch St', '2021-07-29', '1', 5),
+(9600264, 'Jacob', 'Morris', 'male', '3030303030', 'jacobmorris@email.com', '753 Maple St', '2021-08-16', '2', 2),
+(8481914, 'Hailey', 'Nguyen', 'female', '3131313131', 'haileynguyen@email.com', '951 Willow St', '2021-09-23', '3', 4),
+(7047515, 'Michael', 'Murphy', 'male', '3232323232', 'michaelmurphy@email.com', '753 Dogwood St', '2021-10-30', '1', 1),
+(2981238, 'Emily', 'Rivera', 'female', '3333333333', 'emilyrivera@email.com', '951 Cherry St', '2021-11-17', '2', 2),
+(7305101, 'Matthew', 'Cook', 'male', '3434343434', 'matthewcook@email.com', '753 Oak St', '2021-12-24', '3', 3),
+(6042892, 'Ashley', 'Rogers', 'female', '3535353535', 'ashleyrogers@email.com', '951 Pine St', '2022-01-31', '1', 4),
+(9338127, 'Joshua', 'Garcia', 'male', '3636363636', 'joshuagarcia@email.com', '753 Cedar St', '2022-02-14', '2', 2),
+(7722168, 'Alyssa', 'Martin', 'female', '3737373737', 'alyssamartin@email.com', '951 Birch St', '2022-03-21', '3', 3),
+(1119918, 'Nicholas', 'Ortiz', 'male', '3838383838', 'nicholasortiz@email.com', '753 Maple St', '2022-04-28', '1', 5),
+(6273026, 'Jordan', 'Gonzalez', 'male', '3939393939', 'jordangonzalez@email.com', '951 Willow St', '2022-05-15', '2', 2),
+(9753082, 'Natalie', 'Ramirez', 'female', '4040404040', 'natalieramirez@email.com', '753 Dogwood St', '2022-06-22', '3', 3),
+(6504494, 'Christian', 'Lewis', 'male', '4141414141', 'christianlewis@email.com', '951 Cherry St', '2022-07-29', '1', 5),
+(2156307, 'Makayla', 'Robinson', 'female', '4242424242', 'makaylarobinson@email.com', '753 Oak St', '2022-08-16', '2', 2),
+(9868039, 'Dylan', 'Walker', 'male', '4343434343', 'dylanwalker@email.com', '951 Pine St', '2022-09-23', '3', 3),
+(6078901, 'Evelyn', 'Turner', 'female', '4545454545', 'evelynturner@email.com', '951 Birch St', '2022-11-17', '2', 5),
+(7183926, 'Abigail', 'Phillips', 'female', '4646464646', 'abigailphillips@email.com', '753 Maple St', '2022-12-24', '3', 6),
+(9622337, 'Jackson', 'Campbell', 'male', '4747474747', 'jacksoncampbell@email.com', '951 Willow St', '2023-01-31', '1', 6),
+(6926154, 'Ella', 'Parker', 'female', '4848484848', 'ellaparker@email.com', '753 Dogwood St', '2023-02-14', '2', 6),
+(1470839, 'Landon', 'Evans', 'male', '4949494949', 'landonevans@email.com', '951 Cherry St', '2023-03-21', '3', 6),
+(5511050, 'Natalie', 'Edwards', 'female', '5050505050', 'natalieedwards@email.com', '753 Oak St', '2023-04-28', '1', 6),
+(1045773, 'Cameron', 'Stewart', 'male', '5151515151', 'cameronstewart@email.com', '951 Pine St', '2023-05-15', '2', 6),
+(6747369, 'Lila', 'Flores', 'female', '5252525252', 'lilaflores@email.com', '753 Cedar St', '2023-06-22', '3', 7),
+(1121819, 'Aiden', 'Morris', 'male', '5353535353', 'aidenmorris@email.com', '951 Birch St', '2023-07-29', '1', 7),
+(5589783, 'Brooklyn', 'Nguyen', 'female', '5454545454', 'brooklynnguyen@email.com', '753 Maple St', '2023-08-16', '2', 7),
+(3874992, 'Makayla', 'Murphy', 'female', '5555555555', 'makaylamurphy@email.com', '951 Willow St', '2023-09-23', '3', 7),
+(5204626, 'Jason', 'Rivera', 'male', '5656565656', 'jasongarcia@email.com', '753 Dogwood St', '2023-10-30', '1', 7),
+(1061046, 'Alyssa', 'Cook', 'female', '5757575757', 'alyssacook@email.com', '951 Cherry St', '2023-11-17', '2', 6),
+(3789171, 'Luke', 'Rogers', 'male', '5858585858', 'lukerogers@email.com', '753 Oak St', '2023-12-24', '3', 5);
+
+
+
+
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES
+(3, 23, 112),
+(4, 45, 156),
+(2, 12, 87),
+(5, 59, 27),
+(3, 34, 133),
+(4, 18, 71),
+(2, 41, 114),
+(5, 15, 33),
+(3, 30, 108),
+(4, 53, 142),
+(2, 9, 61),
+(5, 48, 16),
+(3, 25, 102),
+(4, 39, 148),
+(2, 21, 75),
+(5, 54, 29),
+(3, 32, 124),
+(4, 17, 63),
+(2, 44, 109),
+(5, 11, 37),
+(3, 29, 96),
+(4, 51, 157),
+(2, 7, 69),
+(5, 46, 20),
+(3, 24, 91),
+(4, 38, 153),
+(2, 20, 72),
+(5, 55, 31),
+(3, 33, 130),
+(4, 16, 58),
+(2, 43, 105),
+(5, 10, 40),
+(3, 28, 95),
+(4, 50, 156),
+(2, 6, 67),
+(5, 47, 21),
+(3, 23, 89),
+(4, 37, 150),
+(2, 19, 74),
+(5, 52, 28),
+(3, 31, 127),
+(4, 15, 62),
+(2, 42, 110),
+(5, 9, 36),
+(3,38,49),
+(4,46,53),
+(4,44,4),
+(4,37,6),
+(5,57,105),
+(4,54,73),
+(5,42,138),
+(5,40,28),
+(5,26,5),
+(2,1,26),
+(4,17,16),
+(3,34,3),
+(4,18,151),
+(3,24,143),
+(2,52,135),
+(5,10,92),
+(5,27,33),
+(2,14,90),
+(3,14,83),
+(4,27,49),
+(5,38,75),
+(4,1,99),
+(5,31,45),
+(4,39,9),
+(3,19,85),
+(2,6,82),
+(3,8,143),
+(3,30,27),
+(2,14,100),
+(3,11,75),
+(5,3,45),
+(2,16,143),
+(4,38,130),
+(3,32,137),
+(3,24,137),
+(3,29,112),
+(5,31,106),
+(5,44,139),
+(5,1,40),
+(3,5,56),
+(4,20,141),
+(4,30,156),
+(3,7,24),
+(2,26,67),
+(3,10,35),
+(5,33,130),
+(3,18,131),
+(4,40,33),
+(4,43,75),
+(3,6,148),
+(2,58,139),
+(3,21,100),
+(3,21,43),
+(5,24,153),
+(5,43,69),
+(2,14,141),
+(3,9,18),
+(3,36,29),
+(2,31,119),
+(3,8,6),
+(5,19,130),
+(3,15,40),
+(4,50,143),
+(3,5,128),
+(2,32,57),
+(5,54,7),
+(3,54,106),
+(5,17,66),
+(5,34,87),
+(4,44,10),
+(3,47,54),
+(5,56,46),
+(2,36,117),
+(3,34,48),
+(4,5,42),
+(3,19,19),
+(4,25,149),
+(2,27,100),
+(4,40,34),
+(4,10,146),
+(3,12,45),
+(2,2,90),
+(5,47,48),
+(2,23,145),
+(3,49,34),
+(2,11,66),
+(3,39,53),
+(4,29,16),
+(3,54,86),
+(3,49,58),
+(3,4,122),
+(4,7,58),
+(4,39,99),
+(3,26,68),
+(3,43,37),
+(3,34,95),
+(3,36,87),
+(4,25,19),
+(3,56,64),
+(4,22,113),
+(5,54,9),
+(3,57,151),
+(3,57,1),
+(2,2,12),
+(4,40,3),
+(3,8,70),
+(3,38,92),
+(5,30,13),
+(4,17,13),
+(4,47,21),
+(3,40,120),
+(2,32,76),
+(5,39,97),
+(2,26,69),
+(5,27,36),
+(2,19,57),
+(5,16,120),
+(3,7,12),
+(5,41,36),
+(3,41,128),
+(3,35,77),
+(3,34,119),
+(4,55,149),
+(3,42,15),
+(4,56,9),
+(4,17,129),
+(4,47,154),
+(3,30,132),
+(5,46,146),
+(4,55,142),
+(4,36,83),
+(4,53,53),
+(3,45,53),
+(5,25,37),
+(4,5,93),
+(2,23,79),
+(4,18,25),
+(5,11,133),
+(4,26,90),
+(4,35,17),
+(5,45,101),
+(4,33,50),
+(3,28,84),
+(2,32,55),
+(2,16,82),
+(4,37,136),
+(4,35,145),
+(3,30,20),
+(3,57,88),
+(4,16,5),
+(4,6,90),
+(3,51,12),
+(5,37,88),
+(5,32,75),
+(4,1,25),
+(2,58,132),
+(3,56,131),
+(4,14,49),
+(4,52,27),
+(3,37,11),
+(4,1,126),
+(2,21,74),
+(4,25,25),
+(3,55,142),
+(3,5,20),
+(3,22,139),
+(4,44,149),
+(4,49,72),
+(4,1,16),
+(3,55,119),
+(3,19,115),
+(2,5,105),
+(4,15,82),
+(2,56,27),
+(2,16,61),
+(2,44,37),
+(4,54,16),
+(5,30,62),
+(3,56,114),
+(4,4,57),
+(4,48,122),
+(4,28,34),
+(2,37,19),
+(2,15,41),
+(5,30,147),
+(3,35,143),
+(2,56,5),
+(4,34,155),
+(5,3,41),
+(3,47,113),
+(4,17,107),
+(3,51,48),
+(3,48,62),
+(4,22,9),
+(5,34,76),
+(3,48,20),
+(4,18,24),
+(4,54,46),
+(4,32,88),
+(2,32,78);
+
+
+
+INSERT INTO Employees (firstname, lastname, gender, phone_number, email, title, id_Deanery, date_of_employment , salary)
+VALUES ('Adam', 'Smith', 'Male', '5555555555', 'adam.smith@example.com', 'Dean', 1, '20220101', 6000),
+       ('Emily', 'Johnson', 'Female', '5555555556', 'emily.johnson@example.com', 'vice President', 1, '20220201', 9000),
+       ('Michael', 'Williams', 'Male', '5555555557', 'michael.williams@example.com', 'Dean', 1, '20220301', 6000),
+       ('Sarah', 'Jones', 'Female', '5555555558', 'sarah.jones@example.com', 'Dean', 1, '20220401', 4000),
+       ('Matthew', 'Brown', 'Male', '5555555559', 'matthew.brown@example.com', 'Dean', 2, '20220501', 5600),
+       ('Ashley', 'Moore', 'Female', '5555555560', 'ashley.moore@example.com', 'vice President', 2, '20220601', 10000),
+       ('David', 'Taylor', 'Male', '5555555561', 'david.taylor@example.com', 'Dean', 2, '20220701', 6500),
+       ('Jessica', 'Anderson', 'Female', '5555555562', 'jessica.anderson@example.com', 'Dean', 2, '20220801', 4500),
+       ('Richard', 'Thomas', 'Male', '5555555563', 'richard.thomas@example.com', 'Dean', 3, '20220901', 9000),
+       ('Samantha', 'Jackson', 'Female', '5555555564', 'samantha.jackson@example.com', 'Dean', 3, '20221001', 6000),
+       ('John', 'White', 'Male', '5555555565', 'john.white@example.com', 'vice President', 3, '20221101', 9500),
+       ('Karen', 'Harris', 'Female', '5555555566', 'karen.harris@example.com', 'Dean', 3, '20221201', 6100),
+       ('Jason', 'Martin', 'Male', '5555555567', 'jason.martin@example.com', 'Dean', 4, '20230101', 4300),
+       ('Rachel', 'Thompson', 'Female', '5555555568', 'rachel.thompson@example.com', 'Dean', 4, '20230201', 7300),
+       ('Kevin', 'Garcia', 'Male', '5555555569', 'kevin.garcia@example.com', 'vice President', 4, '20200301', 8500),
+       ('Lindsay', 'Martinez', 'Female', '5555555570','lindsay.martinez@example.com' , 'Dean', 4, '20230401', 4500),
+		('Eric', 'Robinson', 'Male', '5555555571', 'eric.robinson@example.com', 'Dean', 5, '19990501', 6100),
+		('Amber', 'Clark', 'Female', '5555555572', 'amber.clark@example.com', 'Dean', 5, '20010601', 7800),
+		('Brian', 'Rodriguez', 'Male', '5555555573', 'brian.rodriguez@example.com', 'Dean', 5, '20230701', 4900),
+		('Megan', 'Lewis', 'Female', '5555555574', 'megan.lewis@example.com', 'vice President', 5, '20040801', 9400),
+		('Charlie', 'Walker', 'Male', '5555555575', 'charlie.walker@example.com', 'Dean', 6, '20210901', 6000),
+		('Brittany', 'Hall', 'Female', '5555555576', 'brittany.hall@example.com', 'Dean', 6, '20201001', 6800),
+		('Greg', 'Allen', 'Male', '5555555577', 'greg.allen@example.com', 'vice President', 6, '20231101', 3700),
+		('Caitlyn', 'Young', 'Female', '5555555578', 'caitlyn.young@example.com', 'Dean', 6, '20230105', 5500),
+		('Ben', 'Hernandez', 'Male', '5555555579', 'ben.hernandez@example.com', 'Dean', 7, '20210101', 5800),
+		('Jasmine', 'King', 'Female', '5555555580', 'jasmine.king@example.com', 'vice President', 7, '20200201', 11000),
+		('Adam', 'Wright', 'Male', '5555555581', 'adam.wright@example.com', 'Dean', 7, '20210301', 4900),
+		('Hannah', 'Lopez', 'Female', '5555555582', 'hannah.lopez@example.com', 'Dean', 7, '20200401', 6200),
+		('Jack', 'Hill', 'Male', '5555555583', 'jack.hill@example.com', 'Dean', 8, '20180501', 7100),
+		('Natalie', 'Scott', 'Female', '5555555584', 'natalie.scott@example.com', 'Dean', 8, '20120601', 3400),
+		('Ethan', 'Green', 'Male', '5555555585', 'ethan.green@example.com', 'vice President', 8, '20140701', 9200),
+		('Makayla', 'Adams', 'Female', '5555555586', 'makayla.adams@example.com', 'Dean', 8, '20140801', 3900),
+		('Noah', 'Carter', 'Male', '5555555589', 'noah.carter@example.com', 'vice President', 9, '20171201', 4600),
+		('Alyssa', 'Mitchell', 'Female', '5555555590', 'alyssa.mitchell@example.com', 'Dean', 9, '20170101', 6100),
+		('Brandon', 'Perez', 'Male', '5555555591', 'brandon.perez@example.com', 'Dean', 9, '20110201', 5700),
+		('Mia', 'Roberts', 'Female', '5555555592', 'mia.roberts@example.com', 'Dean', 9, '20050301', 6700);
+
+	
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate)
+VALUES (30, 10, 1, '2022-01-01', '2022-02-01'),
+       (40, 20, 2, '2022-01-01', '2022-02-01'),
+       (50, 30, 3, '2022-01-01', '2022-02-01'),
+       (60, 40, 4, '2022-01-01', '2022-02-01'),
+       (70, 50, 5, '2022-01-01', '2022-02-01'),
+       (80, 60, 6, '2022-01-01', '2022-02-01'),
+       (90, 70, 7, '2022-01-01', '2022-02-01'),
+       (100, 80, 8, '2022-01-01', '2022-02-01'),
+       (30, 10, 9, '2022-01-01', '2022-02-01'),
+       (40, 20, 10, '2022-01-01', '2022-02-01'),
+       (50, 30, 11, '2022-01-01', '2022-02-01'),
+       (60, 40, 12, '2022-01-01', '2022-02-01'),
+       (70, 50, 13, '2022-01-01', '2022-02-01'),
+       (80, 60, 14, '2022-01-01', '2022-02-01'),
+       (90, 70, 15, '2022-01-01', '2022-02-01'),
+       (100, 80, 16, '2022-01-01', '2022-02-01'),
+       (30, 10, 17, '2022-01-01', '2022-02-01'),
+       (40, 20, 18, '2022-01-01', '2022-02-01'),
+       (50, 30, 19, '2022-01-01', '2022-02-01'),
+       (60, 40, 20, '2022-01-01', '2022-02-01'),
+       (70, 50, 21, '2022-01-01', '2022-02-01'),
+       (80, 60, 22, '2022-01-01', '2022-02-01'),
+       (90, 70, 23, '2022-01-01', '2022-02-01'),
+       (100, 80, 24, '2022-01-01', '2022-02-01'),
+       (30, 10, 25, '2022-01-01', '2022-02-01'),
+       (40, 20, 26, '2022-01-01', '2022-02-01'),
+       (50, 30, 27, '2022-01-01', '2022-02-01'),
+		(60, 40, 28, '2022-01-01', '2022-02-01'),
+		(70, 50, 29, '2022-01-01', '2022-02-01'),
+		(80, 60, 30, '2022-01-01', '2022-02-01'),
+		(90, 70, 31, '2022-01-01', '2022-02-01'),
+		(100, 80, 32, '2022-01-01', '2022-02-01'),
+		(30, 10, 33, '2022-01-01', '2022-02-01'),
+		(40, 20, 34, '2022-01-01', '2022-02-01'),
+		(50, 30, 35, '2022-01-01', '2022-02-01'),
+		(60, 40, 36, '2022-01-01', '2022-02-01'),
+		(70, 50, 37, '2022-01-01', '2022-02-01'),
+		(80, 60, 38, '2022-01-01', '2022-02-01'),
+		(90, 70, 39, '2022-01-01', '2022-02-01'),
+		(100, 80, 40, '2022-01-01', '2022-02-01'),
+		(30, 10, 41, '2022-01-01', '2022-02-01'),
+		(40, 20, 42, '2022-01-01', '2022-02-01');
+	
+	
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, points, id_Recruitment)
+	VALUES
+	('John', 'Doe', 'male', '5555555555', 'johndoe@email.com', '123 Main St', 50, 1),
+	('Jane', 'Smith', 'female', '5555555555', 'janesmith@email.com', '456 Park Ave', 75, 2),
+	('Michael', 'Johnson', 'male', '5555555555', 'michaeljohnson@email.com', '789 Elm St', 90, 3),
+	('Emily', 'Williams', 'female', '5555555555', 'emilywilliams@email.com', '321 Oak St', 85, 4),
+	('Matthew', 'Brown', 'male', '5555555555', 'matthewbrown@email.com', '654 Pine St', 80, 5),
+	('James', 'Davis', 'male', '5555555555', 'jamesdavis@email.com', '111 Maple St', 70, 6),
+	('Ashley', 'Miller', 'female', '5555555555', 'ashleymiller@email.com', '222 Birch St', 65, 7),
+	('David', 'Garcia', 'male', '5555555555', 'davidgarcia@email.com', '333 Cedar St', 60, 8),
+	('Emily', 'Martin', 'female', '5555555555', 'emilymartin@email.com', '444 Pine St', 55, 9),
+	('Jacob', 'Thompson', 'male', '5555555555', 'jacobthompson@email.com', '555 Oak St', 50, 10),
+	('Isabella', 'White', 'female', '5555555555', 'isabellawhite@email.com', '666 Cedar St', 45, 11),
+	('Ethan', 'Harris', 'male', '5555555555', 'ethanharris@email.com', '777 Pine St', 40, 12),
+	('Sofia', 'Martin', 'female', '5555555555', 'sofiamartin@email.com', '888 Oak St', 35, 13),
+	('Mason', 'Thompson', 'male', '5555555555', 'masont@email.com', '999 Cedar St', 30, 14),
+	('Avery', 'Garcia', 'female', '5555555555', 'averygarcia@email.com', '123 Elm St', 25, 15),
+	('Noah', 'Martin', 'male', '5555555555', 'noahmartin@email.com', '456 Birch St', 20, 16),
+	('Lily', 'Anderson', 'female', '5555555555', 'lilyanderson@email.com', '789 Pine St', 15, 17),
+	('Eli', 'Thomas', 'male', '5555555555', 'elithomas@email.com', '321 Cedar St', 78, 18),
+	('Natalie', 'Harrison', 'female', '5555555555', 'natalieharrison@email.com', '654 Oak St', 5, 19),
+	('Mia', 'Gibson', 'female', '5555555555', 'miagibson@email.com', '987 Elm St', 30, 20),
+	('Landon', 'Mcbride', 'male', '5555555555', 'landonmcbride@email.com', '111 Maple St', 70, 17),
+	('Hannah', 'Craig', 'female', '5555555555', 'hannahcraig@email.com', '222 Birch St', 65, 6),
+	('Madison', 'Rodriguez', 'female', '5555555555', 'madisonrodriguez@email.com', '333 Cedar St', 60, 42),
+	('Nicholas', 'Lopez', 'male', '5555555555', 'nicholaslopez@email.com', '444 Pine St', 55, 12),
+	('Evelyn', 'Gonzalez', 'female', '5555555555', 'evelyngonzalez@email.com', '555 Oak St', 50, 31),
+	('Evelyn', 'Gonzalez', 'female', '5555555555', 'evelyngonzalez@email.com', '555 Oak St', 50, 3),
+	('Avery', 'Green', 'male', '5555555555', 'averygreen@email.com', '666 Cedar St', 45, 26),
+	('Eli', 'Baker', 'male', '5555555555', 'elibaker@email.com', '777 Pine St', 40, 18),
+	('Aubree', 'Adams', 'female', '5555555555', 'aubreeadams@email.com', '888 Oak St', 35, 11),
+	('Gage', 'Nelson', 'male', '5555555555', 'agagenelson@email.com', '999 Cedar St', 32, 21),
+	('Quinn', 'Carter', 'female', '5555555555', 'quinncarter@email.com', '123 Elm St', 28, 32),
+	('Brayden', 'Mitchell', 'male', '5555555555', 'braydenmitchell@email.com', '456 Birch St', 20, 15),
+	('Kaylee', 'Perez', 'female', '5555555555', 'kayleeperez@email.com', '789 Pine St', 15, 7),
+	('Jacob', 'Green', 'male', '5555555555', 'jacobgreen@email.com', '321 Cedar St', 98, 14),
+	('Mackenzie', 'Perkins', 'female', '5555555555', 'mackenzieperkins@email.com', '654 Oak St', 85, 29),
+	('Bella', 'Harrison', 'female', '5555555555', 'bellaharrison@email.com', '987 Elm St', 50, 1),
+	('Luke', 'Gibson', 'male', '5555555555', 'lukegibson@email.com', '111 Maple St', 70, 25),
+	('Leah', 'Mcdonald', 'female', '5555555555', 'leahmcdonald@email.com', '222 Birch St', 65, 42),
+	('Avery', 'Cruz', 'female', '5555555555', 'averycruz@email.com', '333 Cedar St', 60, 6),
+	('Jordan', 'Marshall', 'male', '5555555555', 'jordanmarshall@email.com', '444 Pine St', 55, 20),
+	('Cameron', 'Ortiz', 'male', '5555555555', 'cameronortiz@email.com', '555 Oak St', 50, 12),
+	('Autumn', 'Gomez', 'female', '5555555555', 'autumngomez@email.com', '666 Cedar St', 45, 24),
+	('Gavin', 'Murray', 'male', '5555555555', 'gavinmurray@email.com', '777 Pine St', 40, 31),
+	('Kaylee', 'Freeman', 'female', '5555555555', 'kayleefreeman@email.com', '888 Oak St', 35, 18),
+	('Miles', 'Wells', 'male', '5555555555', 'mileswells@email.com', '999 Cedar St', 30, 5),
+	('Bella', 'Webb', 'female', '5555555555', 'bellawebb@email.com', '123 Elm St', 25, 9),
+	('Hudson', 'Simpson', 'male', '5555555555', 'hudsonsimpson@email.com', '456 Birch St', 70, 14),
+	('Brooklyn', 'Stevens', 'female', '5555555555', 'brooklynstevens@email.com', '789 Pine St', 15, 21),
+	('Adam', 'Tucker', 'male', '5555555555', 'adamtucker@email.com', '321 Cedar St', 10, 30),
+	('Mackenzie', 'Porter', 'female', '5555555555', 'mackenzieporter@email.com', '654 Oak St', 5, 28),
+	('Avery', 'Hunter', 'female', '5555555555', 'averyhunter@email.com', '987 Elm St', 0, 13),
+	('Ethan', 'Hicks', 'male', '5555555555', 'ethanhicks@email.com', '111 Maple St', 70, 14),
+	('Natalie', 'Daniels', 'female', '5555555555', 'nataliedaniels@email.com', '222 Birch St', 65, 9),
+	('Mia', 'Edwards', 'female', '5555555555', 'miaedwards@email.com', '333 Cedar St', 60, 32),
+	('Eli', 'Stewart', 'male', '5555555555', 'elistewart@email.com', '444 Pine St', 55, 18),
+	('Avery', 'Flores', 'male', '5555555555', 'averyflores@email.com', '555 Oak St', 50, 7),
+	('Avery', 'Curtis', 'female', '5555555555', 'averycurtis@email.com', '666 Cedar St', 45, 25),
+	('Eli', 'Neal', 'male', '5555555555', 'elineal@email.com', '777 Pine St', 40, 11),
+	('Mackenzie', 'Cox', 'female', '5555555555', 'mackenziecox@email.com', '888 Oak St', 35, 2),
+	('Miles', 'Black', 'male', '5555555555', 'milesblack@email.com', '999 Cedar St', 30, 16);
+	
+	
+	
+INSERT INTO achievements (name, stage, dateOfAchievement, id_Candidates)
+	VALUES
+	('Certificate of Completion', 'Java Programming', '2022-05-01', 33),
+	('Certificate of Excellence', 'Machine Learning', '2022-03-15', 59),
+	('1st Place in Hackathon', 'Data Science', '2021-12-10', 14),
+	('Best Presentation Award', 'AI Development', '2021-09-25', 45),
+	('Top Performer of the Month', 'Cloud Computing', '2021-07-30', 1),
+	('Award for Innovation', 'Big Data', '2021-05-15', 60),
+	('Award for Best Project', 'Blockchain', '2021-03-01', 18),
+	('Award for Creativity', 'IoT', '2021-01-15', 12),
+	('Award for Leadership', 'DevOps', '2020-12-01', 50),
+	('Award for Teamwork', 'Cybersecurity', '2020-11-15', 25),
+	('Award for Excellence', 'Data Analysis', '2020-10-01', 5),
+	('Best Paper Award', 'Data Visualization', '2020-09-15', 40),
+	('Top Student Award', 'Data Engineering', '2020-08-01', 30),
+	('Award for Best Project', 'Data Governance', '2020-07-15', 15),
+	('Award for Innovation', 'Data Management', '2020-06-01', 55),
+	('Award for Creativity', 'Data Mining', '2020-05-15', 22),
+	('Award for Leadership', 'Data Science', '2020-04-01', 10),
+	('Award for Teamwork', 'Data Warehousing', '2020-03-15', 32),
+	('Award for Best Presentation', 'Data Cleansing', '2020-02-01', 20),
+	('Award for Best Paper', 'Data Quality', '2020-01-15', 35),
+	('Award for Best Performance', 'Data Modeling', '2019-12-01', 55),
+	('Award for Best Practice', 'Data Integration', '2019-11-15', 25),
+	('Award for Best Analysis', 'Data Governance', '2019-10-01', 42),
+	('Award for Best Project', 'Data Management', '2019-09-15', 15),
+	('Award for Best Innovation', 'Data Mining', '2019-08-01', 12),
+	('Award for Best Creativity', 'Data Science', '2019-07-15', 50),
+	('Award for Best Leadership', 'Data Warehousing', '2019-06-01', 30),
+	('Award for Best Teamwork', 'Data Cleansing', '2019-05-15', 20),
+	('Award for Best Presentation', 'Data Quality', '2019-04-01', 35),
+	('Award for Best Paper', 'Data Governance', '2019-03-15', 42),
+	('Award for Best Project', 'Data Governance', '2019-02-01', 20),
+	('Award for Best Innovation', 'Data Management', '2019-01-15', 35),
+	('Award for Best Creativity', 'Data Mining', '2018-12-01', 50),
+	('Award for Best Leadership', 'Data Science', '2018-11-15', 30),
+	('Award for Best Teamwork', 'Data Warehousing', '2018-10-01', 42),
+	('Award for Best Presentation', 'Data Cleansing', '2018-09-15', 15),
+	('Award for Best Paper', 'Data Quality', '2018-08-01', 12),
+	('Award for Best Performance', 'Data Modeling', '2018-07-15', 55),
+	('Award for Best Practice', 'Data Integration', '2018-06-01', 25),
+	('Award for Best Analysis', 'Data Governance', '2018-05-15', 17);
+	
+	
+	
+INSERT INTO students_fieldsofstudy (id_Student,id_FieldsOfStudy) VALUES 
+	(1,42),
+	(2,18),
+	(3,15),
+	(4,28),
+	(5,36),
+	(6,34),
+	(7,28),
+	(8,8),
+	(9,10),
+	(10,29),
+	(11,27),
+	(12,28),
+	(13,4),
+	(14,29),
+	(15,19),
+	(16,40),
+	(17,25),
+	(18,39),
+	(19,37),
+	(20,21),
+	(21,41),
+	(22,38),
+	(23,29),
+	(24,17),
+	(25,34),
+	(26,4),
+	(27,31),
+	(28,18),
+	(28,17),
+	(29,30),
+	(30,33),
+	(31,13),
+	(32,2),
+	(33,41),
+	(34,20),
+	(35,21),
+	(36,31),
+	(37,27),
+	(38,7),
+	(39,8),
+	(40,4),
+	(41,25),
+	(42,34),
+	(43,41),
+	(44,41),
+	(45,4),
+	(46,27),
+	(47,20),
+	(46,22),
+	(47,10),
+	(48,12),
+	(49,38),
+	(50,17),
+	(51,41),
+	(52,35),
+	(53,38),
+	(54,21),
+	(55,3),
+	(56,19),
+	(57,10),
+	(58,23),
+	(59,19);
+	
+INSERT INTO scholarships (price, id_Student, id_Department, startDate, endDate) VALUES
+	(1000, 2, 1, '2022-09-01', '2022-12-31'),
+	(2000, 5, 2, '2022-09-01', '2022-12-31'),
+	(3000, 10, 3, '2022-09-01', '2022-12-31'),
+	(4000, 15, 4, '2022-09-01', '2022-12-31'),
+	(5000, 20, 5, '2022-09-01', '2022-12-31'),
+	(6000, 25, 6, '2022-09-01', '2022-12-31'),
+	(7000, 30, 7, '2022-09-01', '2022-12-31'),
+	(8000, 35, 8, '2022-09-01', '2022-12-31'),
+	(9000, 40, 9, '2022-09-01', '2022-12-31'),
+	(10000, 45, 10, '2022-09-01', '2022-12-31');
+	
+
+
+
+
+INSERT INTO President (firstname, lastname) VALUES('Krista', 'Casey')
+INSERT INTO President (firstname, lastname) VALUES('Ellen', 'Cohen')
+INSERT INTO President (firstname, lastname) VALUES('Tracy', 'Reynolds')
+INSERT INTO President (firstname, lastname) VALUES('Keith', 'Cross')
+INSERT INTO President (firstname, lastname) VALUES('Barbara', 'Scott')
+INSERT INTO Academy (name, address, phone_number, email) VALUES('Dawson-Norton', '5459 Brenda Wall
+East Diana, NY 52466', '701909974', 'dhernandez@example.com')
+INSERT INTO Academy (name, address, phone_number, email) VALUES('Dougherty, Stone and Howard', '05363 Lynch Fork Suite 559
+South Lucas, OR 36452', '570555376', 'elizabethallen@example.com')
+INSERT INTO Academy (name, address, phone_number, email) VALUES('Reyes, Morrison and King', '0190 Scott Skyway
+North Nathanburgh, MS 53057', '926917157', 'loganalbert@example.org')
+INSERT INTO Academy (name, address, phone_number, email) VALUES('Harris, Jimenez and Solomon', '123 Davis Plaza Suite 588
+North Randallfort, MA 14046', '351662570', 'bbrown@example.org')
+INSERT INTO Academy (name, address, phone_number, email) VALUES('Luna-Kerr', '0848 Mendez Throughway Apt. 394
+Allenside, GA 46740', '883028639', 'patrick96@example.com')
+INSERT INTO Department (name, id_Academy) VALUES('Petroleum engineer', 1)
+INSERT INTO Department (name, id_Academy) VALUES('Science writer', 3)
+INSERT INTO Department (name, id_Academy) VALUES('Therapist, art', 2)
+INSERT INTO Department (name, id_Academy) VALUES('Architectural technologist', 5)
+INSERT INTO Department (name, id_Academy) VALUES('Midwife', 4)
+INSERT INTO Deanery (phone_number, email) VALUES('761790202', 'rjoseph@example.com')
+INSERT INTO Deanery (phone_number, email) VALUES('116063454', 'qmiller@example.com')
+INSERT INTO Deanery (phone_number, email) VALUES('977902153', 'liuconnie@example.com')
+INSERT INTO Deanery (phone_number, email) VALUES('864599346', 'smithnatalie@example.com')
+INSERT INTO Deanery (phone_number, email) VALUES('789563068', 'cisnerosrichard@example.org')
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Accountant, chartered certified', 4)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Ergonomist', 1)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Purchasing manager', 3)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Paediatric nurse', 3)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Information officer', 3)
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Samuel', 'Hall', 'female', 21817, '933669089', 'jordangarner@example.net', 'Retail merchandiser', 4, '2005-09-03')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Alec', 'Yu', 'female', 76693, '789745584', 'martincindy@example.net', 'Microbiologist', 3, '2000-01-15')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Michelle', 'Wade', 'female', 70968, '299990684', 'jeffrey80@example.com', 'Tax adviser', 3, '2011-03-08')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('David', 'Payne', 'female', 70531, '882323783', 'cookjared@example.org', 'Accountant, chartered management', 2, '2020-10-08')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Kimberly', 'Villegas', 'male', 84565, '330231355', 'tylernicholas@example.org', 'Production engineer', 4, '1991-04-07')
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(19771166, 'Robert', 'Mayer', 'male', '776320178', 'boothdana@example.com', '00219 Thomas Centers
+Shannonmouth, MA 13010', '1983-03-13', '8', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(12177189, 'Kristina', 'Miller', 'female', '852177288', 'yboyd@example.com', '7942 Wayne Mountain
+Davidmouth, NY 61017', '1997-10-27', '9', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(48221903, 'Jerome', 'Juarez', 'female', '980363723', 'cameron16@example.net', 'PSC 2807, Box 0038
+APO AP 61254', '1981-10-30', '4', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(67140477, 'Kenneth', 'Boyle', 'female', '642273440', 'rwagner@example.com', '39963 Sutton Orchard Suite 117
+South Williamhaven, PR 78495', '1997-04-28', '5', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(15403617, 'Jane', 'Peterson', 'male', '863068727', 'maxwellray@example.org', '8611 Christine Extension Suite 046
+Derekton, AR 79069', '2015-02-11', '1', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(18151577, 'John', 'Rodriguez', 'female', '963927638', 'johnsonmatthew@example.net', '6809 Jody Islands
+South Tracyview, CO 35908', '1988-10-02', '4', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(76951408, 'Kristin', 'Thomas', 'female', '842372004', 'zanderson@example.com', '12833 Michelle Cliff Apt. 431
+East Christianton, IN 97917', '1989-02-12', '7', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(65030626, 'Kim', 'Howell', 'male', '370829349', 'jessica65@example.net', '5032 Carlos Lakes Suite 809
+Hollowayburgh, AL 52138', '2011-12-22', '0', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(45557631, 'Larry', 'Lambert', 'male', '755135595', 'justin94@example.net', '235 Robertson Trail
+South Ryan, OH 72102', '2010-04-17', '9', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(72561912, 'Andre', 'Lowery', 'female', '671309077', 'perezmonique@example.org', 'Unit 2808 Box 2598
+DPO AA 57958', '1986-01-21', '1', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(99016595, 'Michelle', 'Jimenez', 'male', '479665175', 'elozano@example.net', '75286 Frazier Drive Apt. 204
+Johnville, MD 15311', '1994-11-26', '5', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(54816091, 'Jacob', 'Johnson', 'male', '533676034', 'edwinnelson@example.com', '5727 Hernandez Orchard Apt. 115
+South Michelle, KY 91241', '2009-10-15', '2', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(473806, 'Thomas', 'Taylor', 'female', '764442373', 'gibbsjeffrey@example.org', 'USCGC Price
+FPO AA 38811', '1998-02-11', '9', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(52615821, 'Angela', 'Martinez', 'male', '139289371', 'laurennorton@example.com', '7947 Garcia Hill
+North Rodneytown, KY 54946', '1996-11-20', '5', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(70168048, 'Joseph', 'Skinner', 'male', '203588076', 'spearson@example.net', '2096 Amber Mall
+New Noah, KS 53893', '1994-11-30', '7', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(21129380, 'William', 'Smith', 'female', '763419649', 'ann28@example.net', '39183 Francisco Roads
+North Paulburgh, WI 52648', '1982-02-27', '7', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(82855233, 'Shannon', 'Leonard', 'male', '249175104', 'kimberly11@example.net', '16846 Morales Valley Suite 592
+Johnsonshire, UT 54618', '2000-09-18', '4', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(8766948, 'Carl', 'Garcia', 'male', '673514604', 'howardbrian@example.net', '6511 Walls Spur
+Kennethhaven, NY 30019', '2009-11-07', '7', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(13710889, 'Amanda', 'Huff', 'male', '618071893', 'changmaria@example.net', 'PSC 9990, Box 0827
+APO AE 07302', '1997-06-26', '5', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(88648046, 'Mark', 'Brown', 'male', '421787142', 'jeremylewis@example.net', '97186 Lori Branch
+Lorishire, UT 25583', '2001-02-22', '5', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(22393205, 'Billy', 'Odonnell', 'female', '600786211', 'simmonsrobert@example.com', '81558 David Trail Apt. 338
+North Julie, VT 02616', '2015-10-14', '1', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(61164446, 'Robert', 'Thompson', 'female', '268873002', 'brandonmartin@example.com', '47747 Vaughn Streets
+Mccoyburgh, OH 25149', '1986-06-07', '0', 5)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(3, 3)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(1, 3)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(1, 1)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(3, 5)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(4, 5)
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Alicia', 'Alexander', 'male', '687761927', 'khunter@example.com', 'PSC 5921, Box 3404
+APO AP 89710', 'Health physicist')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Linda', 'Wilson', 'male', '293167076', 'jason44@example.net', '876 Nichole Wall
+Hopkinsfurt, IN 37019', 'Doctor, hospital')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Katherine', 'Wagner', 'male', '249566227', 'robert27@example.net', '387 Henry Hill Apt. 906
+Sanchezmouth, GU 76127', 'Theme park manager')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Shane', 'Lewis', 'male', '156522869', 'kenneth78@example.com', '63122 Garcia Avenue
+Smithmouth, SD 27933', 'Arts development officer')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Karen', 'Yang', 'male', '693929654', 'wharrison@example.com', '75201 Dunlap Mews Apt. 783
+Lake Matthew, MS 51931', 'Information systems manager')
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(3, 1)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(1, 3)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(4, 4)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(1, 2)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(2, 2)
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(4487, 1, 4, '1981-04-03 02:28:26', '2019-07-05 01:04:26')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(4149, 1, 5, '1987-09-28 01:38:33', '1979-03-31 19:05:41')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(5976, 3, 4, '1973-05-31 04:41:54', '1974-12-30 23:00:20')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(9394, 2, 3, '2017-02-07 02:20:23', '2013-08-21 18:59:21')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(7265, 2, 5, '1991-10-09 23:32:18', '2008-05-01 05:08:24')
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('2', 3, 4)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('2', 5, 4)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('5', 5, 4)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('4', 1, 5)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('3', 5, 2)
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(69, 94, 2, '2021-06-08 00:01:59', '2020-05-20 17:19:47')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(88, 26, 5, '1996-10-12 16:49:56', '2003-07-14 16:07:06')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(91, 4, 3, '1976-09-04 22:34:09', '2011-04-03 08:31:34')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(8, 96, 5, '1980-03-05 04:34:25', '2002-10-30 21:04:04')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(10, 43, 3, '2005-01-18 00:05:22', '1999-06-24 11:55:35')
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Anthony', 'Bradley', 'male', '692544710', 'benjamin72@example.com', '810 Wilcox Island
+Port Johntown, UT 40415', 3, 71)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Scott', 'Howe', 'female', '842347333', 'benjamin58@example.org', '5296 Melissa Causeway
+Lake Desiree, PR 03115', 1, 22)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Michael', 'Holmes', 'male', '911163382', 'njones@example.com', '0890 Campbell Terrace
+North Victoria, OR 00535', 3, 87)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Erin', 'Cain', 'male', '730986842', 'justinholmes@example.com', '985 Miller Circles Suite 564
+New Shannon, PW 42012', 2, 10)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Nathan', 'Welch', 'male', '160520668', 'gibsondavid@example.org', '476 Ramirez Springs
+Lake Steven, CT 74142', 3, 58)
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Risk manager', '2', '2007-10-03', 'Geophysical data processor')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Geophysical data processor', '4', '2021-11-14', 'Manufacturing systems engineer')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Chief Strategy Officer', '3', '2001-06-17', 'Surgeon')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Air broker', '4', '2000-09-06', 'Multimedia programmer')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Mining engineer', '5', '1992-11-29', 'Animal technologist')
+INSERT INTO Department (name, id_Academy) VALUES('Chartered management accountant', 2)
+INSERT INTO Department (name, id_Academy) VALUES('Lighting technician, broadcasting/film/video', 4)
+INSERT INTO Department (name, id_Academy) VALUES('Private music teacher', 1)
+INSERT INTO Department (name, id_Academy) VALUES('IT trainer', 4)
+INSERT INTO Department (name, id_Academy) VALUES('Medical technical officer', 3)
+INSERT INTO Deanery (phone_number, email) VALUES('526888141', 'alexanderrodriguez@example.net')
+INSERT INTO Deanery (phone_number, email) VALUES('670446613', 'zwalls@example.org')
+INSERT INTO Deanery (phone_number, email) VALUES('545820485', 'michaeljackson@example.net')
+INSERT INTO Deanery (phone_number, email) VALUES('983154861', 'nwhite@example.org')
+INSERT INTO Deanery (phone_number, email) VALUES('697998332', 'drakelori@example.org')
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Physiotherapist', 4)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Engineer, aeronautical', 4)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Call centre manager', 2)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Administrator, local government', 3)
+INSERT INTO FieldsOfStudy (name, id_Department) VALUES('Herbalist', 2)
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Kelsey', 'Cannon', 'female', 47875, '698054374', 'jacquelinescott@example.net', 'Systems analyst', 4, '1972-09-13')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Julie', 'Carter', 'female', 33824, '899780630', 'oanderson@example.net', 'Administrator, sports', 5, '1994-01-11')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Shelley', 'Brown', 'female', 59162, '278235133', 'jessicaali@example.com', 'Surveyor, hydrographic', 4, '1996-01-15')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('Calvin', 'Flowers', 'female', 71510, '165327229', 'terri12@example.net', 'Associate Professor', 3, '2004-07-29')
+INSERT INTO Employees (firstname, lastname, gender, salary, phone_number, email, title, id_Deanery, date_of_employment) VALUES('James', 'Diaz', 'female', 47584, '668638859', 'edwardsmith@example.org', 'Interpreter', 4, '1993-10-11')
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(14278828, 'Michael', 'Garza', 'male', '524623774', 'lewiskyle@example.net', '9286 Hector Camp
+Masseyport, WA 86639', '1989-08-01', '0', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(81038663, 'Nicholas', 'Lucas', 'female', '372839235', 'alyssajones@example.net', '00312 Lee Run Suite 893
+Lake Richardborough, CO 01197', '1987-05-18', '7', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(84698945, 'Shannon', 'Jimenez', 'male', '671903680', 'butlersara@example.com', 'Unit 3971 Box 4566
+DPO AE 91583', '2017-04-24', '5', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(3443673, 'Christine', 'Juarez', 'male', '351652459', 'kgillespie@example.org', '63845 Tammy Locks
+Zacharyshire, OK 93098', '1972-08-31', '7', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(28887035, 'Megan', 'Townsend', 'male', '636900168', 'udiaz@example.net', '6245 Rice Stream
+Port Nicholasfurt, NC 54826', '2021-02-11', '4', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(25336763, 'Dawn', 'Baker', 'female', '304486643', 'yspears@example.net', '2524 Amanda Brook Apt. 506
+Lake Kennethborough, FM 02463', '1995-11-28', '3', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(87383854, 'Christina', 'Hale', 'female', '976819876', 'marshallnancy@example.com', 'PSC 6507, Box 3903
+APO AE 37486', '2021-03-22', '7', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(64860197, 'Dustin', 'Schmidt', 'male', '938223709', 'riggslaura@example.com', '827 Jones Point
+Steveberg, OR 27536', '1981-05-21', '3', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(53543090, 'Brianna', 'Macias', 'male', '539989298', 'susancook@example.org', '0356 Michael Roads Apt. 177
+Williammouth, ID 14911', '2018-09-03', '5', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(68450495, 'Diane', 'Thompson', 'male', '247611910', 'ufuentes@example.net', '085 Kayla Inlet
+Port Amy, SC 81402', '1970-03-02', '7', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(67893975, 'Gina', 'Sanders', 'male', '744437303', 'fryan@example.net', '6116 Nelson Crossroad Suite 544
+Lake Dwayneside, VI 49308', '1993-11-12', '4', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(69408790, 'Jeffery', 'Gomez', 'male', '374339245', 'paul41@example.org', '85613 Patrick Islands Suite 928
+Lake Rebeccamouth, MA 79790', '1986-08-09', '2', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(83153956, 'Deborah', 'Marshall', 'female', '970025862', 'kristinconner@example.com', 'USNV Buchanan
+FPO AP 86483', '2006-11-01', '3', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(84230258, 'Sarah', 'Sullivan', 'female', '435331737', 'murphystephen@example.com', '73978 Rice Throughway
+Christopherland, ND 87091', '2006-02-13', '9', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(86436510, 'Mary', 'Phillips', 'female', '867034041', 'brenda19@example.net', '164 Frey Tunnel Apt. 085
+South Jeffville, NE 66429', '1984-11-12', '8', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(76647624, 'William', 'Hughes', 'male', '419960831', 'craig85@example.com', '7306 Carter Harbor
+Grahamhaven, OH 33513', '2020-08-01', '8', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(99616029, 'Cassandra', 'Cooley', 'female', '110966533', 'rturner@example.org', '044 Michael Wells
+Lake Gregory, SD 18021', '1996-03-22', '1', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(49042744, 'Michael', 'Franco', 'female', '202258404', 'watersjill@example.com', '493 Brooks Spurs
+South Charlesstad, OK 03823', '1979-10-19', '3', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(12316927, 'Pamela', 'Wright', 'male', '151101769', 'hannah74@example.com', '38164 Brown Motorway
+Rileymouth, MH 80481', '1985-11-19', '8', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(39828099, 'Scott', 'Gardner', 'female', '678514258', 'charlotte72@example.com', '33375 Robinson Harbors
+Paulburgh, IL 69149', '1970-11-11', '8', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(98607897, 'Brian', 'Chan', 'male', '210214057', 'angela31@example.org', '9137 Washington Corner Apt. 301
+Lake Chase, MD 02038', '2001-09-14', '1', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(19923103, 'Tony', 'Martinez', 'male', '458671414', 'susan07@example.net', '925 Johnson Route
+Bradleyport, MI 86908', '1999-01-27', '8', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(94457609, 'Peter', 'Kennedy', 'male', '269889646', 'rachelsimmons@example.org', '365 Ross Forge Apt. 365
+Brownville, OR 18579', '1995-06-09', '0', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(90189143, 'Mary', 'Brown', 'female', '498565058', 'anthonyjohnson@example.org', '44886 Annette Bypass
+Lewischester, MS 09505', '1988-05-06', '8', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(16765313, 'Antonio', 'Kelley', 'male', '567295214', 'samantha67@example.net', 'PSC 4740, Box 6963
+APO AE 21833', '1988-03-24', '9', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(81910816, 'Kathryn', 'Horton', 'male', '367019825', 'lisa78@example.com', '62352 Sean Pass
+Joseberg, MH 08435', '1990-10-21', '7', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(7892087, 'Kevin', 'Ponce', 'male', '441406354', 'jennifergoodman@example.com', '1456 Yates Ramp Suite 294
+North Melissafort, KS 36067', '1988-03-16', '0', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(60225456, 'Benjamin', 'Johnson', 'female', '640607199', 'jortega@example.org', '29795 Jay Plaza
+Lynchburgh, IN 87646', '1992-06-30', '8', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(25818036, 'Michael', 'Lee', 'male', '519407155', 'christianhansen@example.org', '25322 Wanda Locks Suite 739
+New Johnfort, MP 16904', '2014-07-08', '2', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(7448012, 'Tasha', 'Anderson', 'female', '545026710', 'twood@example.com', '8646 Johnson Overpass Suite 751
+Ninaview, UT 05692', '1993-08-14', '6', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(83919751, 'Hector', 'Jones', 'female', '403369189', 'psimmons@example.net', '12157 Lynch Passage
+New Anthony, DC 49748', '1976-11-28', '3', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(86205286, 'Gregory', 'Sellers', 'male', '793156208', 'jamesrojas@example.org', '055 Clark Motorway Suite 689
+South Christy, NM 82788', '1993-06-06', '3', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(29527979, 'Andrew', 'Solomon', 'female', '719860625', 'heatherbates@example.org', '848 Bender Mountains
+Castillofurt, VT 08379', '2016-03-19', '4', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(71261256, 'Kim', 'Nguyen', 'male', '243110583', 'baguilar@example.net', '572 Pearson Course Apt. 860
+New Kennethstad, FM 39129', '1973-08-08', '2', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(65379059, 'Kelly', 'Bell', 'male', '466418939', 'ocook@example.org', '670 Klein Rue Apt. 345
+South Kathrynside, ID 74725', '1994-07-21', '4', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(4732594, 'Jeffrey', 'Shaw', 'male', '425667775', 'alex72@example.net', '846 Kramer Landing Apt. 459
+West Jenna, MO 88413', '1976-07-01', '9', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(18420789, 'Michele', 'Robbins', 'male', '931903027', 'robert24@example.com', 'Unit 4870 Box 2188
+DPO AA 04058', '1989-01-15', '7', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(62513096, 'Brandon', 'Shaw', 'female', '371237398', 'cathy07@example.net', '174 Martin Trail Suite 787
+Port Desireechester, SD 70388', '2022-07-07', '8', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(99019854, 'Laurie', 'Sanders', 'female', '757407073', 'zwoods@example.org', '77299 Smith Point
+New Crystalport, CT 36770', '1987-11-11', '5', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(24707529, 'Caitlin', 'Johnson', 'female', '449503876', 'icarr@example.com', '6268 Thompson Summit Suite 485
+Lake Kimberly, TN 54905', '2018-02-09', '7', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(67302740, 'Eric', 'Taylor', 'female', '321072726', 'wchavez@example.com', '589 Santos Lights
+Lanebury, IA 64146', '2008-11-18', '9', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(88179846, 'Andrea', 'Williams', 'male', '361422181', 'aguirredouglas@example.org', '9311 Smith Lock
+Davidchester, PR 87357', '1988-08-27', '3', 1)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(75118560, 'Daniel', 'Villarreal', 'male', '310650401', 'thenson@example.com', '335 Terry Inlet
+South Haley, OH 81630', '1992-12-14', '5', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(1323446, 'Monique', 'Berry', 'male', '265675984', 'yhawkins@example.com', '10716 Alicia Corners
+West Alicia, AL 90630', '2011-06-07', '0', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(6953791, 'Matthew', 'Oneill', 'female', '851017246', 'katelynpark@example.org', '3633 Daniel Tunnel Apt. 562
+East David, TN 43727', '1979-02-22', '5', 3)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(76475384, 'Tammy', 'Avery', 'male', '207424159', 'clarkmatthew@example.net', '5450 Janet Run Apt. 119
+North Moniquemouth, WY 12134', '2015-07-31', '7', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(24218369, 'Denise', 'Smith', 'female', '182126552', 'nicole62@example.net', '7587 Ward Harbor Apt. 938
+Mahoneyport, AL 88667', '2003-01-17', '2', 5)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(12786234, 'Stephen', 'Boyer', 'female', '725046744', 'jeffreygrant@example.net', '649 Cruz Way Suite 508
+New Jennifer, FL 98104', '1974-04-30', '0', 2)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(86116841, 'Laura', 'Larson', 'male', '449899357', 'natashabarry@example.net', '6703 Brian Path
+Port Kirkberg, NY 12196', '1982-01-03', '1', 4)
+INSERT INTO Students (nr_index, firstname, lastname, gender, phone_number, email, address, dateOfBirth, yearOfStudy, id_StudentsGroups) VALUES(90566904, 'Donald', 'Atkins', 'female', '441844524', 'imoore@example.org', '9297 Michael Road Apt. 927
+Port Kristenberg, DE 20375', '2019-07-25', '6', 5)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(1, 4)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(5, 4)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(2, 1)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(5, 4)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(4, 4)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(2, 17)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(20, 11)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(10, 13)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(11, 2)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(16, 19)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(2, 19)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(6, 12)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(7, 18)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(11, 20)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(9, 7)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(3, 3)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(15, 15)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(6, 9)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(11, 7)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(12, 8)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(17, 16)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(8, 14)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(5, 2)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(19, 8)
+INSERT INTO Students_FieldsOfStudy (id_Student, id_FieldsOfStudy) VALUES(19, 2)
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Joseph', 'Miller', 'male', '402040886', 'garciamark@example.org', '2778 Paul Road Suite 710
+Jeffreyside, PW 83876', 'Sports administrator')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Mark', 'Bennett', 'female', '949263150', 'bpage@example.org', '008 Carroll Curve
+Thompsonchester, PA 15966', 'Administrator, arts')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Cindy', 'Mullins', 'female', '578746468', 'thomas36@example.org', '871 Hernandez Meadow Apt. 825
+Smithville, NH 17977', 'Horticultural therapist')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Daniel', 'Ford', 'female', '323868945', 'kimmarcus@example.com', '800 Nicole Pines Apt. 155
+Warrenstad, SC 34069', 'Therapist, sports')
+INSERT INTO Professors (firstname, lastname, gender, phone_number, email, address, title) VALUES('Madison', 'Lawson', 'male', '822663537', 'petersjill@example.org', '8082 Watts Plain Suite 955
+Coxmouth, ND 13166', 'Broadcast presenter')
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(1, 5)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(3, 4)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(1, 4)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(2, 4)
+INSERT INTO Professors_FieldsOfStudy (id_Professors, id_FieldsOfStudy) VALUES(1, 2)
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(3673, 2, 1, '1997-07-21 23:05:42', '1993-01-29 16:26:35')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(9794, 2, 2, '1982-03-15 11:28:09', '2020-10-29 21:41:22')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(9133, 2, 5, '1983-02-10 07:26:44', '2017-01-24 22:45:19')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(1224, 3, 3, '1987-04-06 10:45:05', '2017-09-10 07:05:15')
+INSERT INTO Scholarships (price, id_Student, id_Department, startDate, endDate) VALUES(9489, 3, 2, '2007-03-19 05:35:05', '1972-07-20 09:28:19')
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('3', 4, 4)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('5', 2, 5)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('3', 5, 5)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('4', 5, 1)
+INSERT INTO Grades (grade, id_Student, id_Lecture) VALUES('5', 5, 5)
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(17, 45, 5, '1997-04-17 20:03:31', '1977-11-24 20:02:48')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(60, 62, 5, '1997-05-06 05:40:44', '1985-08-03 02:17:04')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(15, 86, 1, '1995-01-10 21:14:12', '1978-02-13 12:01:19')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(85, 77, 1, '2003-03-26 00:47:29', '2008-01-20 23:43:33')
+INSERT INTO Recruitment (pointsNeeded, vacancies, id_FieldsOfStudy, startDate, endDate) VALUES(88, 55, 3, '2000-02-29 12:45:32', '2001-01-27 09:01:51')
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Trevor', 'Perry', 'female', '939114964', 'bhester@example.org', '481 Mary Mount Suite 884
+Jonathanview, MD 43310', 3, 50)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Christopher', 'Sanders', 'male', '551084158', 'jessicawilliams@example.com', '47153 Oliver Squares
+New Jason, KS 65135', 5, 82)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Jeffrey', 'Brown', 'male', '624376552', 'oharmon@example.com', '23253 Armstrong Village
+West Amy, VT 27416', 3, 75)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Alexander', 'Knox', 'female', '679444978', 'thomasnelson@example.org', '191 Jillian Canyon
+South Becky, KS 86819', 2, 63)
+INSERT INTO Candidates (firstname, lastname, gender, phone_number, email, address, id_Recruitment, points) VALUES('Tiffany', 'Romero', 'male', '394471349', 'xscott@example.net', '9965 Blevins Forge Suite 958
+East Michael, NJ 06280', 2, 71)
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Social worker', '1', '2002-03-20', 'Purchasing manager')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Trading standards officer', '4', '1988-12-31', 'Therapeutic radiographer')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Teacher, music', '4', '2003-10-01', 'Producer, television/film/video')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Warehouse manager', '2', '2005-12-09', 'Systems developer')
+INSERT INTO Achievements (name, id_Candidates, dateOfAchievement, stage) VALUES('Award of Geneticist, molecular', '1', '1976-09-08', 'Medical sales representative')
+INSERT INTO Library (name, phoneNumber, email, openHours, numberOfBooks, numberOfReaders) VALUES('Samantha Lindsey', '765724940', 'jdavidson@example.net', '9', '589', '237')
+INSERT INTO Library (name, phoneNumber, email, openHours, numberOfBooks, numberOfReaders) VALUES('Carrie Stephenson', '777140953', 'jenna41@example.org', '6', '2120', '90')
+INSERT INTO Library (name, phoneNumber, email, openHours, numberOfBooks, numberOfReaders) VALUES('Victor Ross', '489144692', 'xallen@example.net', '10', '2794', '406')
+INSERT INTO Library (name, phoneNumber, email, openHours, numberOfBooks, numberOfReaders) VALUES('Stephen Miller', '240929699', 'olsonbrian@example.net', '8', '2266', '374')
+INSERT INTO Library (name, phoneNumber, email, openHours, numberOfBooks, numberOfReaders) VALUES('Arthur Dickson', '518550042', 'alex25@example.com', '6', '1717', '449')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '8', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '4', '31')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '4', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '5', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '7', '4')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '20')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '10', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '7', '46')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '2', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '17')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '1', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '1', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '6', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '4', '9')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '5', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '5', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '9', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '2', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '8', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '8', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '3', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '3', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '10', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '2', '31')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '3', '11')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '6', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '3', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '1', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '6', '6')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '2', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '5', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '3', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '7', '31')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '5', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '6', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '9', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '10', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '1', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '2', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '7', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '1', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '3', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '5', '46')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '8', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '3', '42')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '4', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '5', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '7', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '9', '46')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '6', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '2', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '6', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '7', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '8', '50')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '6', '56')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '8', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '1', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '3', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '8', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '2', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '9', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '9', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '5', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '3', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '6', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '2', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '10', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '5', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '2', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '1', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '10', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '6', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '2', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '1', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '10', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '7', '31')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '1', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '9', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '4', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '1', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '5', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '6', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '3', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '9', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '4', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '4', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '3', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '2', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '8', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '8', '32')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '3', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '5', '8')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '3', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '4', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '8', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '3', '12')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '4', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '26')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '7', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '5', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '7', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '4', '23')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '9', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '10', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '3', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '8', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '6', '23')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '10', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '5', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '2', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '8', '42')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '6', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '7', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '7', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '6', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '4', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '9', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '2', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '8', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '9', '26')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '5', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '10', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '10', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '3', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '7', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '3', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '3', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '2', '27')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '9', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '10', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '6', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '10', '12')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '8', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '3', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '4', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '4', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '10', '9')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '8', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '2', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '4', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '6', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '6', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '5', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '2', '32')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '10', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '6', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '8', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '10', '17')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '8', '17')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '5', '38')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '7', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '8', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '10', '50')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '5', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '9', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '8', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '2', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '9', '11')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '6', '4')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '5', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '7', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '8', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '1', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '7', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '1', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '8', '38')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '10', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '10', '8')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '6', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '3', '56')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '9', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '8', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '10', '42')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '5', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '8', '20')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '7', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '10', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '1', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '5', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '1', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '1', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '5', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '8', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '6', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '9', '4')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '7', '56')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '10', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '2', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '7', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '10', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '8', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '1', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '6', '9')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '10', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '7', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '4', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '7', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '3', '23')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '3', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '2', '23')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '3', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '2', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '2', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '9', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '6', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '10', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '5', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '9', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '6', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '10', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '10', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '10', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '5', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '5', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '4', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '5', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '2', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '5', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '3', '6')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '10', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '4', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '2', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '3', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '4', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '5', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '1', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '8', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '8', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '4', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '1', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '2', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '4', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '5', '56')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '2', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '7', '8')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '7', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '2', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '10', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '1', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '6', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '7', '50')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '9', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '4', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '2', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '5', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '9', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '7', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '2', '11')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '2', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '5', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '10', '29')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '4', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '10', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '9', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '10', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '3', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '3', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '9', '42')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '2', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '5', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '8', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '1', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '6', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '2', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '6', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '9', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '1', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '9', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '1', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '5', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '8', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '7', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '7', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '4', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '9', '11')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '5', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '9', '32')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '10', '51')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '6', '32')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '6', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '7', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '5', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '6', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '10', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '10', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '6', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '10', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '1', '17')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '3', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '9', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '5', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '2', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '1', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '1', '9')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '3', '9')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('chalkboard', '5', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '3', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '3', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '3', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '3', '50')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '9', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '4', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '6', '11')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '5', '38')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '5', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '5', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '4', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '4', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '6', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '5', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '8', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '10', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '4', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '1', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '2', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '6', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '10', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '1', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '2', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '8', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '1', '20')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '5', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '1', '4')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '6', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '8', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '1', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '4', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '5', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '3', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '5', '1')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '2', '32')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '6', '23')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '7', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '2', '12')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '2', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '4', '6')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '6', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '10', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '4', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '6', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '6', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '9', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '3', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '5', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '2', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom furniture', '10', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '6', '26')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '5', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '6', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '7', '50')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '4', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '9', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '7', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '3', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '10', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '5', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '5', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '8', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '5', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '2', '56')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '8', '20')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '6', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '4', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '5', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '9', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '8', '50')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '6', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '1', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '5', '6')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '1', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '1', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '2', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '9', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '6', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '7', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '8', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '2', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '8', '60')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '8', '20')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '2', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '2', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '2', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '3', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '8', '43')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '8', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '1', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '8', '17')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '7', '46')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '1', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '5', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '1', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '7', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '5', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '3', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '6', '20')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '9', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '7', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '10', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '1', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '9', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '2', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '3', '22')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '8', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '27')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '7', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '4', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '7', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '3', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '9', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '4', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '7', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '6', '6')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '2', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '7', '25')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '10', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '9', '9')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '7', '31')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('webcam', '5', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '2', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '1', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart locks', '9', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '1', '6')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '6', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '6', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartpen', '1', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '2', '48')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '6', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '6', '41')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('document camera', '3', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '5', '26')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '7', '34')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '4', '46')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '8', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '10', '44')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '3', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '9', '2')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '1', '16')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '2', '17')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('projector', '10', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart classroom software', '7', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '6', '35')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '7', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '9', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('robotics kit', '6', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '5', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '8', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('scanner', '8', '5')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '6', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart podium', '7', '54')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '4', '32')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '3', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '9', '14')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '2', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '10', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '8', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('microphone', '9', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '1', '18')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '2', '52')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('printer', '6', '36')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '3', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '4', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('VR/AR equipment', '7', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('air-conditioner', '10', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '8', '28')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('audiovisual equipment', '10', '19')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '10', '15')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '10', '59')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('sensors', '4', '23')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '4', '30')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '3', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '10', '33')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('speakers', '7', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '6', '26')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '9', '10')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '6', '21')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '7', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('whiteboard', '8', '13')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('3D printer', '2', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('video conferencing equipment', '5', '37')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '2', '24')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '9', '49')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('tablet', '9', '39')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '6', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('overhead projector', '1', '57')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('laptop', '10', '40')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '10', '47')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '3', '55')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('interactive whiteboard', '9', '46')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '8', '53')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '10', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('computer', '7', '3')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart table', '9', '11')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital signage', '1', '45')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('digital media player', '9', '58')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smart lighting', '9', '12')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('smartboard', '5', '7')
+INSERT INTO RoomEquipment (name, quantity, id_Rooms) VALUES('teleconferencing equipment', '7', '10')

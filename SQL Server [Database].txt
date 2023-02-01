@@ -1,0 +1,228 @@
+DROP DATABASE IF EXISTS Uczelnia;
+CREATE DATABASE Uczelnia;
+USE Uczelnia;
+
+
+CREATE TABLE President (
+	id INT PRIMARY KEY IDENTITY,
+	firstname VARCHAR(50) NOT NULL,
+	lastname VARCHAR(50) NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE Academy (
+	id INT IDENTITY PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	address VARCHAR(100) NOT NULL,
+	phone_number VARCHAR(10) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP,
+	
+	CONSTRAINT FK_Academy_President FOREIGN KEY (id) REFERENCES President(id)
+);
+
+CREATE TABLE Department (
+	id INT IDENTITY PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	id_Academy INT NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP,
+	
+	CONSTRAINT FK_Department_Academy FOREIGN KEY (id_Academy) REFERENCES Academy(id)
+);
+
+
+CREATE TABLE Deanery(
+	id INT IDENTITY PRIMARY KEY,
+	phone_number VARCHAR(10) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Deanery_Department FOREIGN KEY (id) REFERENCES Department(id)
+);
+
+
+CREATE TABLE FieldsOfStudy(
+	id INT IDENTITY PRIMARY KEY,
+	name varchar(100) NOT NULL,
+	id_Department int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_FieldsOfStudy_Department FOREIGN KEY (id_Department) REFERENCES Department(id)
+);
+
+CREATE TABLE Employees(
+	id INT IDENTITY PRIMARY KEY,
+	firstname varchar(50) NOT NULL,
+	lastname varchar(50) NOT NULL,
+	gender varchar(20) NOT NULL,
+	salary DECIMAL(20,2) NOT NULL,
+	phone_number varchar(10) NOT NULL,
+	email varchar(50) NOT NULL,
+	title varchar(50) NOT NULL,
+	id_Deanery int NOT NULL,
+	date_of_employment DATE NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	CONSTRAINT FK_Employees_Deanery FOREIGN KEY (id_Deanery) REFERENCES Deanery(id)
+);
+
+CREATE TABLE StudentsGroups(
+	id INT IDENTITY PRIMARY KEY,
+	groupName varchar(50) NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP 
+);
+
+CREATE TABLE Students(
+	id INT IDENTITY PRIMARY KEY,
+	nr_index int NOT NULL UNIQUE,
+	firstname varchar(50) NOT NULL,
+	lastname varchar(50) NOT NULL,
+	gender varchar(20) NOT NULL,
+	phone_number varchar(10),
+	email varchar(50) NOT NULL,
+	address varchar(100) NOT NULL,
+	dateOfBirth date NOT NULL,
+	yearOfStudy varchar(1) NOT NULL,
+	id_StudentsGroups int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Students_StudentsGroups FOREIGN KEY (id_StudentsGroups) REFERENCES StudentsGroups(id)
+);
+
+CREATE TABLE Students_FieldsOfStudy(
+	id INT IDENTITY PRIMARY KEY,
+	id_Student int NOT NULL,
+	id_FieldsOfStudy int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+
+	CONSTRAINT FK_Students_FieldsOfStudy_Students FOREIGN KEY (id_Student) REFERENCES Students(id),
+	CONSTRAINT FK_Students_FieldsOfStudy_FieldsOfStudy FOREIGN KEY (id_FieldsOfStudy) REFERENCES FieldsOfStudy(id)
+);
+
+
+CREATE TABLE Professors(
+	id INT IDENTITY PRIMARY KEY,
+	firstname varchar(50) NOT NULL,
+	lastname varchar(50) NOT NULL,
+	gender varchar(20) NOT NULL,
+	phone_number varchar(10),
+	email varchar(50) NOT NULL,
+	address varchar(100) NOT NULL,
+	title varchar(50) NOT NULL,	
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Rooms(
+	id INT IDENTITY PRIMARY KEY,
+	numberOfRoom int NOT NULL,	
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+);
+
+CREATE TABLE Lecture(
+	id INT IDENTITY PRIMARY KEY,
+	topic varchar(100) NOT NULL,
+	numberOfLecture int NOT NULL,
+	id_group int NOT NULL,
+	id_Professors int NOT NULL,
+	id_Rooms int NOT NULL,
+	startTime datetime NOT NULL,
+	endTime datetime NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_StudentsGroups_Lecture FOREIGN KEY (id_group) REFERENCES StudentsGroups(id),
+	CONSTRAINT FK_Lecture_Professors FOREIGN KEY (id_Professors) REFERENCES Professors(id),
+	CONSTRAINT FK_Lecture_Rooms FOREIGN KEY (id_Rooms) REFERENCES Rooms(id)
+);
+
+CREATE TABLE Professors_FieldsOfStudy(
+	id INT IDENTITY PRIMARY KEY,
+	id_Professors int NOT NULL,
+	id_FieldsOfStudy int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Professors_FieldsOfStudy_Professors FOREIGN KEY (id_Professors) REFERENCES Professors(id),
+	CONSTRAINT FK_Professors_FieldsOfStudy_FieldsOfStudy FOREIGN KEY (id_FieldsOfStudy) REFERENCES FieldsOfStudy(id)
+);
+
+CREATE TABLE Scholarships(
+	id INT IDENTITY PRIMARY KEY,
+	price int NOT NULL,
+	id_Student int NOT NULL,
+	id_Department int NOT NULL,
+	startDate datetime NOT NULL,
+	endDate datetime NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Scholarships_Students FOREIGN KEY (id_Student) REFERENCES Students(id),
+	CONSTRAINT FK_Scholarships_Department FOREIGN KEY (id_Department) REFERENCES Department(id)
+);
+
+CREATE TABLE Grades(
+	id INT IDENTITY PRIMARY KEY,
+	grade varchar(1) NOT NULL,
+	id_Student int NOT NULL,
+	id_Lecture int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Grades_Students FOREIGN KEY (id_Student) REFERENCES Students(id),
+	CONSTRAINT FK_Grades_Lecture FOREIGN KEY (id_Lecture) REFERENCES Lecture(id)
+);
+
+CREATE TABLE Recruitment(
+	id INT IDENTITY PRIMARY KEY,
+	pointsNeeded int NOT NULL,
+	vacancies int NOT NULL,
+	id_FieldsOfStudy int NOT NULL,
+	startDate date NOT NULL,
+	endDate date NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Recruitment_Lecture FOREIGN KEY (id_FieldsOfStudy) REFERENCES FieldsOfStudy(id)
+);
+
+CREATE TABLE Candidates(
+	id INT IDENTITY PRIMARY KEY,
+	firstname varchar(50) NOT NULL,
+	lastname varchar(50) NOT NULL,
+	gender varchar(20) NOT NULL,
+	phone_number varchar(10),
+	email varchar(50) NOT NULL,
+	address varchar(100) NOT NULL,
+	points int NOT NULL,
+	id_Recruitment int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP ,
+	
+	CONSTRAINT FK_Candidates_Recruitment FOREIGN KEY (id_Recruitment) REFERENCES Recruitment(id)
+);
+
+CREATE TABLE Achievements(
+	id INT IDENTITY PRIMARY KEY,
+	name varchar(100) NOT NULL,
+	stage varchar(50) NOT NULL,
+	dateOfAchievement date NOT NULL,
+	id_Candidates int NOT NULL,
+	last_update DATETIME2(3) DEFAULT CURRENT_TIMESTAMP,
+	
+	CONSTRAINT FK_Achievements_Candidates FOREIGN KEY (id_Candidates) REFERENCES Candidates(id)
+);
+
+CREATE TABLE Library (
+	id INT IDENTITY PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phoneNumber VARCHAR(10) NOT NULL,
+   	email VARCHAR(100) NOT NULL,
+    openHours VARCHAR(10) NOT NULL,
+    numberOfBooks INT NOT NULL,
+    numberOfReaders INT NOT NULL,
+    
+	CONSTRAINT FK_Library_Candidates FOREIGN KEY (id) REFERENCES Academy(id)
+);
+
+CREATE TABLE RoomEquipment(
+	id INT IDENTITY PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	quantity INT NOT NULL DEFAULT 1,
+	id_Rooms int NOT NULL,
+	
+	CONSTRAINT FK_RoomEquipment_Rooms FOREIGN KEY (id_Rooms) REFERENCES Rooms(id)
+);

@@ -1,0 +1,166 @@
+USE Uczelnia;
+
+USE master;
+
+
+----------- PROSTE SELECT ----------
+
+-- Informacje o studentach których imie zaczyna się na literę a
+SELECT * FROM Students s WHERE firstname LIKE 'a%';
+
+-- Wyświetla imie, nazwisko i punkty 10 najwyżej punktowanych kandydatów
+SELECT TOP 10 firstname, lastname, points FROM Candidates ORDER BY points DESC;
+
+-- Wybiera kolumny imię, nazwisko, data_zatrudnienia i używa funkcji CONVERT() do zmiany formatu daty
+SELECT firstname, lastname, date_of_employment,
+CONVERT(VARCHAR(10), date_of_employment, 110) as date_of_employment_formatted
+FROM Employees;
+
+-- Wyświetla informacje o profesorach
+SELECT firstname, lastname, CONCAT(email,' ',phone_number) as contact_info
+FROM Professors;
+
+
+
+----------- JOIN-y ----------
+
+--Wyświetla imię i nazwisko rektora oraz nazwę akademii, do której jest przypisany:
+SELECT President.firstname, President.lastname, Academy.name
+FROM President
+JOIN Academy ON President.id = Academy.id;
+
+--Wyświetla numery pokojów, tematy i daty rozpoczęcia zajęć dla zajęć, które odbywają się po dacie "2022-01-01", wynik paginacji 10 wierszy od 10 pozycji.
+SELECT r.numberOfRoom, l.topic, l.startTime FROM Rooms r JOIN Lecture l ON l.id_Rooms = r.id 
+WHERE l.startTime > '2022-01-01'
+ORDER BY l.startTime
+OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
+
+-- Wyświetla imię, nazwisko, temat i numer sali dla ucznia o id = 1
+SELECT s.firstname, s.lastname, l.topic, r.numberOfRoom
+FROM Students s
+JOIN StudentsGroups sg ON s.id_StudentsGroups = sg.id
+JOIN Lecture l ON sg.id = l.id_group
+JOIN Rooms r ON r.id = l.id_Rooms
+WHERE s.id = '1'
+
+--  Wybiera temat, kolumny startTime, endTime, Rooms.numberOfRoom i dla każdej sali oblicza średnią liczbę wykładów
+SELECT topic, startTime, endTime, Rooms.numberOfRoom, AVG(numberOfLecture) OVER (PARTITION BY Rooms.numberOfRoom) as avg_number_of_lectures
+FROM Lecture
+JOIN Rooms ON Rooms.id = Lecture.id_Rooms;
+
+--  Wybiera imię, nazwisko, pensje oraz określa wysokość zarobków za pomocą CASE
+SELECT firstname, lastname, salary,
+CASE
+WHEN salary < 4500 THEN 'Low'
+WHEN salary BETWEEN 4500 AND 9000 THEN 'Medium'
+ELSE 'High'	
+END AS salary_range
+FROM Employees ORDER BY salary;
+
+-- Wyświetla nazwe grupy dla grup w który jest więcej niż 10 studentów
+SELECT LOWER(StudentsGroups.groupName), COUNT(Students.id) AS number_of_students
+FROM Students
+JOIN StudentsGroups
+ON Students.id_StudentsGroups = StudentsGroups.id
+GROUP BY StudentsGroups.groupName
+HAVING COUNT(Students.id) > 10;
+
+
+
+
+----------- JOIN-y [LEFT,RIGHT,...] ----------
+
+-- Wyświetla ilość studentów w każdej grupie
+SELECT sg.groupName, COUNT(s.id) as 'Number of Students'
+FROM StudentsGroups sg
+LEFT JOIN Students s ON s.id_StudentsGroups = sg.id
+GROUP BY sg.groupName;
+
+-- Wyświelta imie i nazwisko oraz grupę do której należą uczniowie
+SELECT Students.firstname, Students.lastname, StudentsGroups.groupName
+FROM Students
+RIGHT JOIN StudentsGroups
+ON Students.id_StudentsGroups = StudentsGroups.id;
+
+-- Wyświetla wszytkie imiona i nazwiska pracowników oraz numery telefonów ze wszystkich wydziałów
+SELECT e.firstname, e.lastname, d.phone_number
+FROM Employees e
+FULL OUTER JOIN Deanery d
+ON e.id_Deanery = d.id;
+
+-- Wyświetla unikalnych wszystkich pracowników oraz wszystkich rektorów
+SELECT firstname, lastname FROM President
+UNION
+SELECT LOWER(firstname), lastname FROM Employees;
+
+
+
+----------- Subqueries [SELECT] ---------- 
+
+-- Wyświetla liczbę wydziałów dla każdej uczelni
+SELECT UPPER(name), (SELECT COUNT(*) FROM Department WHERE id_Academy = Academy.id) as number_of_departments FROM Academy;
+
+-- Wyświetla liczbę kierunków na każdym wydziale
+SELECT UPPER(name), (SELECT COUNT(*) FROM FieldsOfStudy WHERE id_Department = Department.id) as number_of_fields_of_study FROM Department;
+
+-- Wyświetla imię, nazwisko i liczbę unikalnych grup prowadzonych przez każdego profesora
+SELECT professors.firstname, professors.lastname,
+(SELECT COUNT(DISTINCT id_group) FROM Lecture WHERE id_Professors = professors.id) as number_of_groups_taught
+FROM professors
+ORDER BY number_of_groups_taught DESC;
+
+
+
+
+----------- Subqueries [FROM] ---------- 
+
+-- Zapytanie wybiera wszystkie kolumny z podzapytania, które jest tabelą przestawną, która pokazuje sumę liczby różnych osiągnięć dla każdego kandydata. 
+SELECT *
+FROM (
+SELECT firstname, lastname, a.name, COUNT(a.name) as count
+FROM Candidates c
+JOIN achievements a ON a.id_Candidates = c.id
+GROUP BY firstname, lastname, a.name
+) subquery
+PIVOT (
+SUM(count)
+FOR name IN ([1st Place in Hackathon], [Award for Innovation], [Best Presentation Award])
+) AS pivot_table;
+
+-- Wyświetla imie, nazwisko oraz email pracowników z zamienionymi @ na at oraz . na dot.
+SELECT firstname, lastname, REPLACE(email, '@', 'at') as email
+FROM (SELECT id, firstname, lastname, REPLACE(email, '.', 'dot') as email FROM Employees) AS emp;
+
+-- Wyświetla temat oraz obliczony czas trwania wykładu
+SELECT topic, DATEDIFF(minute, startTime, endTime) as duration
+FROM (SELECT id, topic, startTime, endTime FROM Lecture) as lec;
+
+-- To zapytanie zwróci imię, nazwisko i obliczony legal_drinking_age dla wszystkich uczniów, którzy mają co najmniej 21 lat.
+SELECT firstname, lastname, DATEADD(year, -21, dateOfBirth) as legal_drinking_age
+FROM (SELECT id, firstname, lastname, dateOfBirth FROM Students) AS stud
+WHERE DATEDIFF(year, dateOfBirth, GETDATE()) >= 21;
+
+
+
+----------- Subqueries [WHERE] ---------- 
+
+-- Wyświetla imie,nazwisko i pensje pracowników, którzy zarabiają ponad średnią zarobków pracowników
+SELECT firstname, lastname, salary
+FROM Employees
+WHERE salary >= (SELECT AVG(salary) FROM Employees);
+
+-- Wyświetla imie,nazwisko i pensje pracownika, który zarabia najwięcej 
+SELECT firstname, lastname, salary
+FROM Employees
+WHERE salary = (SELECT MAX(salary) FROM Employees);
+
+-- Wyświetla informacje o pracownikach, którzych mają najwięcej liter w imieniu
+SELECT *
+FROM Employees
+WHERE LEN(firstname) = (SELECT MAX(LEN(firstname)) FROM Employees);
+
+
+
+
+
+
